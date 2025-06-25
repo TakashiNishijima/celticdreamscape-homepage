@@ -1,472 +1,1997 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="ja" class="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CelticDreamscape - Celtic Magic Ambient Soundscapes</title>
+    <title>CelticDreamscape - デジタル・ドルイドの音響錬金術</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
-    <script src="https://unpkg.com/feather-icons"></script>
     <script>
         tailwind.config = {
             darkMode: 'class',
             theme: {
                 extend: {
                     colors: {
-                        midnight: '#0d1b2a',
-                        deepteal: '#164e4a',
-                        emerald: '#10b981',
-                        mistsilver: '#cfe8e4',
-                        warmgold: '#d1b36e'
+                        'cyber-blue': '#00ffff',
+                        'cyber-pink': '#ff00ff', 
+                        'cyber-green': '#00ff00',
+                        'mistsilver': '#c0c5ce',
+                        'deepnight': '#1a1a2e',
+                        'deep-emerald': '#164e4a',
+                        'stone-gray': '#888899'
                     },
                     fontFamily: {
-                        'cinzel': ['Cinzel', 'serif'],
-                        'inter': ['Inter', 'sans-serif']
+                        'mono': ['Monaco', 'Menlo', 'Ubuntu Mono', 'monospace'],
+                        'sans': ['Inter', 'system-ui', 'sans-serif'],
+                        'jp-serif': ['Noto Serif JP', 'Yu Mincho', 'YuMincho', 'Hiragino Mincho ProN', 'serif'],
+                        'jp-gothic': ['Noto Sans JP', 'Yu Gothic', 'YuGothic', 'Hiragino Sans', 'Meiryo', 'sans-serif']
+                    },
+                    animation: {
+                        'glitch': 'glitch 0.3s infinite linear alternate-reverse',
+                        'pulse-soft': 'pulse-soft 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'text-shimmer': 'text-shimmer 2.5s ease-in-out infinite alternate'
+                    },
+                    backgroundImage: {
+                        'celtic-knot': "url('data:image/svg+xml,%3Csvg width=\"100\" height=\"100\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"%3E%3Cpath d=\"M50 10 C30 10, 10 30, 10 50 C10 70, 30 90, 50 90 C70 90, 90 70, 90 50 C90 30, 70 10, 50 10 M50 25 C60 25, 75 35, 75 50 C75 65, 60 75, 50 75 C40 75, 25 65, 25 50 C25 35, 40 25, 50 25\" fill=\"none\" stroke=\"%23164e4a\" stroke-width=\"2\" opacity=\"0.1\"/%3E%3C/svg%3E')"
                     }
                 }
             }
         }
     </script>
     <style>
-        .glass-morphism {
-            background: rgba(207, 232, 228, 0.1);
-            backdrop-filter: blur(16px);
-            border: 1px solid rgba(207, 232, 228, 0.2);
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Serif+JP:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&display=swap');
+        
+        .neon-glow {
+            background: linear-gradient(90deg, #60a5fa, #818cf8, #c084fc);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: none;
+            font-weight: 700;
+            letter-spacing: -0.025em;
+            position: relative;
+            display: inline-block;
         }
-        .grain-overlay::before {
+        
+        .neon-glow::after {
             content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, #60a5fa, #818cf8, #c084fc);
+            opacity: 0.8;
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform 0.3s ease;
+        }
+        
+        .neon-glow:hover::after {
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+        
+        .cyber-glow {
+            text-shadow: 
+                0 0 15px rgba(0, 191, 255, 1.0),
+                0 0 25px rgba(0, 191, 255, 0.8),
+                0 0 35px rgba(0, 191, 255, 0.6),
+                0 0 45px rgba(138, 43, 226, 0.7),
+                0 0 65px rgba(50, 205, 50, 0.5);
+            color: #00BFFF;
+            animation: cyber-pulse 1.8s ease-in-out infinite alternate;
+        }
+        
+        .pulse-glow {
+            box-shadow: 
+                0 0 20px rgba(0, 255, 255, 0.15),
+                inset 0 0 20px rgba(0, 255, 255, 0.1);
+            animation: pulse-soft 2s infinite;
+        }
+        
+        @keyframes pulse-soft {
+            0%, 100% {
+                box-shadow: 
+                    0 0 20px rgba(0, 255, 255, 0.15),
+                    inset 0 0 20px rgba(0, 255, 255, 0.1);
+            }
+            50% {
+                box-shadow: 
+                    0 0 30px rgba(0, 255, 255, 0.25),
+                    inset 0 0 30px rgba(0, 255, 255, 0.15);
+            }
+        }
+        
+        .glitch {
+            animation: glitch 0.3s infinite linear alternate-reverse;
+        }
+        
+        @keyframes glitch {
+            0% {
+                text-shadow: 
+                    0.05em 0 0 rgba(255, 215, 0, 0.8), 
+                    -0.05em -0.025em 0 rgba(34, 139, 34, 0.8),
+                    0 0 20px rgba(255, 215, 0, 0.5);
+                transform: translateX(0) skew(0deg);
+            }
+            15% {
+                text-shadow: 
+                    0.05em 0 0 rgba(255, 215, 0, 0.8), 
+                    -0.05em -0.025em 0 rgba(34, 139, 34, 0.8),
+                    0 0 20px rgba(255, 215, 0, 0.5);
+                transform: translateX(0) skew(0deg);
+            }
+            16% {
+                text-shadow: 
+                    -0.05em -0.025em 0 rgba(34, 139, 34, 0.9), 
+                    0.05em 0.025em 0 rgba(255, 215, 0, 0.9),
+                    0 0 25px rgba(34, 139, 34, 0.6);
+                transform: translateX(-2px) skew(-2deg);
+            }
+            49% {
+                text-shadow: 
+                    -0.05em -0.025em 0 rgba(34, 139, 34, 0.9), 
+                    0.05em 0.025em 0 rgba(255, 215, 0, 0.9),
+                    0 0 25px rgba(34, 139, 34, 0.6);
+                transform: translateX(-2px) skew(-2deg);
+            }
+            50% {
+                text-shadow: 
+                    0.025em 0.05em 0 rgba(255, 215, 0, 0.7), 
+                    0.025em 0 0 rgba(34, 139, 34, 0.7),
+                    0 0 30px rgba(255, 215, 0, 0.7);
+                transform: translateX(1px) skew(1deg);
+            }
+            99% {
+                text-shadow: 
+                    0.025em 0.05em 0 rgba(255, 215, 0, 0.7), 
+                    0.025em 0 0 rgba(34, 139, 34, 0.7),
+                    0 0 30px rgba(255, 215, 0, 0.7);
+                transform: translateX(1px) skew(1deg);
+            }
+            100% {
+                text-shadow: 
+                    -0.025em 0 0 rgba(34, 139, 34, 0.6), 
+                    -0.025em -0.05em 0 rgba(255, 215, 0, 0.6),
+                    0 0 15px rgba(34, 139, 34, 0.4);
+                transform: translateX(0) skew(0deg);
+            }
+        }
+        
+        .cyber-glass {
+            background: linear-gradient(135deg, 
+                rgba(26, 26, 46, 0.9) 0%, 
+                rgba(26, 26, 46, 0.95) 100%);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(99, 102, 241, 0.2);
+            border-radius: 0.75rem;
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .cyber-glass:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 40px 0 rgba(99, 102, 241, 0.2);
+            border-color: rgba(99, 102, 241, 0.4);
+        }
+        
+        .stone-tablet {
+            background: linear-gradient(135deg, 
+                rgba(136, 136, 153, 0.3) 0%, 
+                rgba(136, 136, 153, 0.1) 50%, 
+                rgba(136, 136, 153, 0.3) 100%);
+            border: 2px solid rgba(136, 136, 153, 0.4);
+            border-radius: 4px;
+            box-shadow: 
+                inset 0 2px 4px rgba(0, 0, 0, 0.2),
+                0 4px 8px rgba(0, 0, 0, 0.3);
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            transition: all 0.5s ease;
+        }
+        
+        .stone-tablet:hover {
+            transform: translateY(-5px);
+            box-shadow: 
+                inset 0 2px 4px rgba(0, 0, 0, 0.2),
+                0 8px 24px rgba(34, 139, 34, 0.3),
+                0 0 40px rgba(34, 139, 34, 0.2);
+        }
+        
+        .stone-tablet .rune-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+            transition: all 0.6s ease;
+            pointer-events: none;
+        }
+        
+        .stone-tablet:hover .rune-overlay {
+            opacity: 1;
+            transform: translate(-50%, -50%) scale(1.1);
+        }
+        
+        .rune-glow {
+            fill: none;
+            stroke: #22C55E;
+            stroke-width: 2;
+            filter: drop-shadow(0 0 8px rgba(34, 197, 94, 0.8));
+            animation: rune-pulse 2s ease-in-out infinite alternate;
+        }
+        
+        @keyframes rune-pulse {
+            0% {
+                stroke-opacity: 0.6;
+                filter: drop-shadow(0 0 8px rgba(34, 197, 94, 0.6));
+            }
+            100% {
+                stroke-opacity: 1;
+                filter: drop-shadow(0 0 16px rgba(34, 197, 94, 1));
+            }
+        }
+        
+        .nav-link {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: -100%;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #00ffff, transparent);
+            transition: left 0.3s ease-in-out;
+        }
+        
+        .nav-link:hover::after {
+            left: 0;
+        }
+        
+        .masonry-grid {
+            display: block !important;
+            width: 100% !important;
+            position: relative !important;
+            z-index: 1000 !important;
+        }
+        
+        .masonry-item {
+            display: block !important;
+            width: 100% !important;
+            position: relative !important;
+            z-index: 1000 !important;
+            margin-bottom: 2rem;
+        }
+        
+        .celtic-separator {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            margin: 0 0.5rem;
+            background: url('data:image/svg+xml,%3Csvg width="20" height="20" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath d="M10 2 L14 6 L10 10 L6 6 Z M10 10 L14 14 L10 18 L6 14 Z" fill="%2300ffff" opacity="0.6"/%3E%3C/svg%3E') center/contain no-repeat;
+        }
+        
+        @keyframes text-shimmer {
+            0% { 
+                color: #FFD700;
+                text-shadow: 
+                    0 0 10px rgba(255, 215, 0, 0.6),
+                    0 0 20px rgba(255, 215, 0, 0.4);
+            }
+            25% {
+                color: #32CD32;
+                text-shadow: 
+                    0 0 15px rgba(50, 205, 50, 0.8),
+                    0 0 25px rgba(50, 205, 50, 0.5);
+            }
+            50% { 
+                color: #00FFFF;
+                text-shadow: 
+                    0 0 20px rgba(0, 255, 255, 0.9),
+                    0 0 30px rgba(0, 255, 255, 0.6);
+            }
+            75% {
+                color: #228B22;
+                text-shadow: 
+                    0 0 15px rgba(34, 139, 34, 0.8),
+                    0 0 25px rgba(34, 139, 34, 0.5);
+            }
+            100% { 
+                color: #FFD700;
+                text-shadow: 
+                    0 0 10px rgba(255, 215, 0, 0.6),
+                    0 0 20px rgba(255, 215, 0, 0.4);
+            }
+        }
+        
+        .text-shimmer {
+            animation: text-shimmer 3s ease-in-out infinite;
+        }
+        
+        .glow-text {
+            text-shadow: 
+                0 0 10px rgba(34, 139, 34, 0.8),
+                0 0 20px rgba(34, 139, 34, 0.6),
+                0 0 30px rgba(34, 139, 34, 0.4);
+            animation: gentle-glow 4s ease-in-out infinite alternate;
+        }
+        
+        @keyframes gentle-glow {
+            0% {
+                text-shadow: 
+                    0 0 10px rgba(34, 139, 34, 0.8),
+                    0 0 20px rgba(34, 139, 34, 0.6),
+                    0 0 30px rgba(34, 139, 34, 0.4);
+            }
+            100% {
+                text-shadow: 
+                    0 0 15px rgba(34, 139, 34, 1.0),
+                    0 0 25px rgba(34, 139, 34, 0.8),
+                    0 0 35px rgba(34, 139, 34, 0.6);
+            }
+        }
+        
+        /* キャッチコピー専用スタイリング */
+        .catchphrase {
+            background: linear-gradient(135deg, 
+                rgba(0, 0, 0, 0.8) 0%, 
+                rgba(15, 25, 35, 0.9) 50%, 
+                rgba(0, 0, 0, 0.8) 100%);
+            backdrop-filter: blur(15px);
+            border: 2px solid rgba(0, 255, 255, 0.3);
+            box-shadow: 
+                0 8px 32px rgba(0, 0, 0, 0.5),
+                inset 0 1px 0 rgba(255, 255, 255, 0.1),
+                0 0 20px rgba(0, 255, 255, 0.1);
+        }
+        
+        .catchphrase p {
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+        }
+        
+        /* Music Image Styling */
+        .music-image {
+            transition: all 0.3s ease;
+            filter: brightness(0.9) contrast(1.1);
+        }
+        
+        .music-image:hover {
+            transform: scale(1.02);
+            filter: brightness(1.0) contrast(1.2);
+            box-shadow: 
+                0 12px 40px rgba(0, 255, 255, 0.2),
+                0 0 30px rgba(0, 255, 255, 0.1) !important;
+        }
+        
+        /* Hide audio player controls */
+        audio::-webkit-media-controls-panel {
+            background: rgba(0, 0, 0, 0.8);
+        }
+        
+        /* Hide playback rate and picture-in-picture buttons - Comprehensive */
+        audio::-webkit-media-controls-overflow-button,
+        audio::-webkit-media-controls-picture-in-picture-button,
+        audio::-webkit-media-controls-fullscreen-button,
+        audio::-webkit-media-controls-cast-button,
+        audio::-webkit-media-controls-overlay-cast-button {
+            display: none !important;
+            visibility: hidden !important;
+            width: 0 !important;
+            height: 0 !important;
+            opacity: 0 !important;
+        }
+        
+        /* Firefox */
+        audio::-moz-media-controls-overflow-button,
+        audio::-moz-media-controls-picture-in-picture-button,
+        audio::-moz-media-controls-fullscreen-button {
+            display: none !important;
+            visibility: hidden !important;
+        }
+        
+        /* Additional hiding for stubborn buttons */
+        audio {
+            outline: none;
+        }
+        
+        audio::-webkit-media-controls {
+            overflow: hidden;
+        }
+        
+        @keyframes epic-glow {
+            0% {
+                text-shadow: 
+                    0 0 10px rgba(255, 215, 0, 1.0),
+                    0 0 20px rgba(255, 215, 0, 0.8),
+                    0 0 30px rgba(255, 215, 0, 0.6),
+                    0 0 40px rgba(255, 215, 0, 0.4),
+                    0 0 60px rgba(0, 191, 255, 0.6),
+                    0 0 80px rgba(138, 43, 226, 0.4);
+                transform: scale(1);
+            }
+            100% {
+                text-shadow: 
+                    0 0 20px rgba(255, 215, 0, 1.2),
+                    0 0 30px rgba(255, 215, 0, 1.0),
+                    0 0 40px rgba(255, 215, 0, 0.8),
+                    0 0 50px rgba(255, 215, 0, 0.6),
+                    0 0 70px rgba(0, 191, 255, 0.8),
+                    0 0 90px rgba(138, 43, 226, 0.6);
+                transform: scale(1.02);
+            }
+        }
+        
+        @keyframes cyber-pulse {
+            0% {
+                text-shadow: 
+                    0 0 15px rgba(0, 191, 255, 1.0),
+                    0 0 25px rgba(0, 191, 255, 0.8),
+                    0 0 35px rgba(0, 191, 255, 0.6),
+                    0 0 45px rgba(138, 43, 226, 0.7),
+                    0 0 65px rgba(50, 205, 50, 0.5);
+                transform: scale(1);
+            }
+            100% {
+                text-shadow: 
+                    0 0 25px rgba(0, 191, 255, 1.2),
+                    0 0 35px rgba(0, 191, 255, 1.0),
+                    0 0 45px rgba(0, 191, 255, 0.8),
+                    0 0 55px rgba(138, 43, 226, 0.9),
+                    0 0 75px rgba(50, 205, 50, 0.7);
+                transform: scale(1.03);
+            }
+        }
+        
+        @keyframes celtic-float {
+            0% { transform: translateY(0px) rotate(0deg); }
+            33% { transform: translateY(-10px) rotate(1deg); }
+            66% { transform: translateY(5px) rotate(-1deg); }
+            100% { transform: translateY(0px) rotate(0deg); }
+        }
+        
+        .celtic-float {
+            animation: celtic-float 4s ease-in-out infinite;
+        }
+        
+        #home {
+            position: relative;
+            z-index: 1;
+        }
+        
+        @keyframes mystic-glow {
+            0% {
+                filter: brightness(1.0) contrast(1.0);
+            }
+            100% {
+                filter: brightness(1.2) contrast(1.1);
+            }
+        }
+        
+        /* Canvas styling */
+        #hero-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -10;
+            pointer-events: none;
+        }
+        
+        /* 動く光の粒子 */
+        .floating-particles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
+            pointer-events: none;
+        }
+        
+        .floating-particles::before,
+        .floating-particles::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            background: radial-gradient(circle, rgba(255, 215, 0, 0.8), transparent);
+            border-radius: 50%;
+            box-shadow: 
+                0 0 10px rgba(255, 215, 0, 0.6),
+                0 0 20px rgba(255, 215, 0, 0.4),
+                0 0 30px rgba(255, 215, 0, 0.2);
+            animation: float-particle 8s ease-in-out infinite;
+        }
+        
+        .floating-particles::before {
+            top: 20%;
+            left: 15%;
+            animation-delay: 0s;
+        }
+        
+        .floating-particles::after {
+            top: 70%;
+            right: 20%;
+            background: radial-gradient(circle, rgba(0, 191, 255, 0.8), transparent);
+            box-shadow: 
+                0 0 10px rgba(0, 191, 255, 0.6),
+                0 0 20px rgba(0, 191, 255, 0.4),
+                0 0 30px rgba(0, 191, 255, 0.2);
+            animation-delay: 4s;
+        }
+        
+        @keyframes float-particle {
+            0%, 100% {
+                transform: translateY(0px) translateX(0px);
+                opacity: 0.7;
+            }
+            25% {
+                transform: translateY(-30px) translateX(20px);
+                opacity: 1;
+            }
+            50% {
+                transform: translateY(-15px) translateX(-25px);
+                opacity: 0.8;
+            }
+            75% {
+                transform: translateY(-40px) translateX(15px);
+                opacity: 0.9;
+            }
+        }
+        
+        /* Scroll-based fade-in animation */
+        .fade-in-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+        
+        .fade-in-on-scroll.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Platform icons styling */
+        .platform-icons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin: 1rem 0;
+        }
+        
+        .platform-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        
+        .platform-icon:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 20px currentColor;
+        }
+        
+        .platform-icon.active {
+            border-color: currentColor;
+            box-shadow: 0 0 15px currentColor;
+        }
+        
+        .platform-icon.spotify {
+            background: #1DB954;
+            color: white;
+        }
+        
+        .platform-icon.soundcloud {
+            background: #FF5500;
+            color: white;
+        }
+        
+        .platform-icon.youtube {
+            background: #FF0000;
+            color: white;
+        }
+        
+        .platform-icon.bandcamp {
+            background: #629AA0;
+            color: white;
+        }
+        
+        .platform-icon.active {
+            transform: scale(1.1);
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.6);
+            opacity: 1;
+        }
+        
+        .platform-icon:hover {
+            transform: scale(1.05);
+            opacity: 0.9;
+        }
+        
+        .fade-in-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+        
+        .fade-in-on-scroll.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .video-wrapper {
+            position: relative !important;
+            width: 100% !important;
+            height: 315px !important;
+            margin: 20px 0 !important;
+            background: #000 !important;
+            border: 3px solid #00ffff !important;
+            border-radius: 8px !important;
+            overflow: hidden !important;
+            z-index: 9999 !important;
+            display: block !important;
+            min-height: 315px !important;
+        }
+        
+        @media (max-width: 768px) {
+            .video-wrapper {
+                height: 200px !important;
+                min-height: 200px !important;
+            }
+            
+            .track-card {
+                margin-bottom: 1.5rem !important;
+            }
+            
+            .masonry-grid {
+                grid-template-columns: 1fr !important;
+                gap: 1rem !important;
+            }
+        }
+        
+        .video-loading {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #00ffff;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .video-loading::before {
+            content: '';
+            width: 20px;
+            height: 20px;
+            border: 2px solid #00ffff;
+            border-top: 2px solid transparent;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .video-wrapper::before {
+            content: "🎬 YouTube Video Area - Should be visible here";
+            position: absolute;
+            top: -30px;
+            left: 0;
+            background: #00ffff;
+            color: #000;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: bold;
+            z-index: 99999;
+            white-space: nowrap;
+        }
+        
+        .video-iframe {
+            position: absolute !important;
+            top: 0 !important;
+            left: 0 !important;
+            width: 100% !important;
+            height: 100% !important;
+            border: 2px solid #ff0000 !important;
+            z-index: 10000 !important;
+            display: block !important;
+            background: #222 !important;
+            opacity: 1 !important;
+            visibility: visible !important;
+        }
+        
+        
+        /* ケルト自然風景背景 - 最適化 */
+        body {
+            background: 
+                /* 高コントラスト神秘オーバーレイ */
+                radial-gradient(ellipse 800px 400px at 25% 15%, rgba(255, 215, 0, 0.25), transparent 70%),
+                radial-gradient(ellipse 600px 300px at 75% 85%, rgba(138, 43, 226, 0.2), transparent 60%),
+                radial-gradient(ellipse 1000px 500px at 50% 50%, rgba(0, 191, 255, 0.08), transparent 80%),
+                /* メイン森林背景 */
+                url('./forest.png') center bottom/cover,
+                /* 深いダークベース */
+                linear-gradient(180deg, 
+                    rgba(10, 15, 25, 0.95) 0%,
+                    rgba(15, 35, 35, 0.8) 40%,
+                    rgba(5, 25, 15, 0.9) 80%,
+                    rgba(10, 15, 25, 0.98) 100%);
+            background-attachment: fixed, fixed, fixed, fixed, fixed;
+            background-blend-mode: screen, multiply, soft-light, overlay, normal;
+            min-height: 100vh;
+        }
+        
+        #hero-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -10;
+            pointer-events: none;
+        }
+        
+        /* 戦略的湖景レイヤー */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 120%;
+            height: 120%;
+            background: 
+                /* 大スケール湖景 */
+                url('./lake.png') 30% 40% / 130% auto no-repeat;
+            opacity: 0.5;
+            z-index: -9;
+            pointer-events: none;
+            mix-blend-mode: luminosity;
+            animation: subtleFloat 60s ease-in-out infinite;
+        }
+        
+        /* 背景ベースレイヤー */
+        body {
+            background: 
+                /* ベースグラデーション */
+                linear-gradient(135deg, #0a192f 0%, #172a45 50%, #1a365d 100%),
+                /* 山のシルエット */
+                url('./mountain.png') 70% 30% / 140% auto no-repeat,
+                /* グリッドパターン */
+                linear-gradient(rgba(0, 191, 255, 0.1) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 191, 255, 0.1) 1px, transparent 1px),
+                /* 光のエフェクト */
+                radial-gradient(3px 3px at 15% 25%, rgba(255, 215, 0, 0.8), transparent 70%),
+                radial-gradient(2px 2px at 85% 75%, rgba(138, 43, 226, 0.7), transparent 60%),
+                radial-gradient(1px 1px at 60% 40%, rgba(0, 191, 255, 0.6), transparent 50%);
+            
+            background-size: 
+                100% 100%,
+                contain,
+                40px 40px,
+                40px 40px,
+                400px 300px,
+                350px 250px,
+                300px 200px;
+                
+            background-blend-mode: 
+                normal,
+                normal,
+                normal,
+                normal,
+                hard-light,
+                screen,
+                screen;
+                
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            color: #e2e8f0;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        /* コンテンツ用のオーバーレイ */
+        #main-content {
+            position: relative;
+            z-index: 1;
+            background: rgba(15, 23, 42, 0.7);
+            backdrop-filter: blur(10px);
+            min-height: 100vh;
+        }
+        
+        @keyframes drift {
+            from { transform: translateX(0); }
+            to { transform: translateX(-200px); }
+        }
+        
+        @keyframes subtleFloat {
+            0%, 100% { 
+                transform: translateY(0px) translateX(0px) scale(1);
+                opacity: 0.5;
+            }
+            50% { 
+                transform: translateY(-15px) translateX(10px) scale(1.02);
+                opacity: 0.6;
+            }
+        }
+        
+        @keyframes epicDrift {
+            0%, 100% { 
+                transform: translateY(0px) translateX(0px) rotate(0deg) scale(1);
+                opacity: 0.45;
+            }
+            33% { 
+                transform: translateY(-20px) translateX(15px) rotate(0.5deg) scale(1.03);
+                opacity: 0.55;
+            }
+            66% { 
+                transform: translateY(10px) translateX(-10px) rotate(-0.3deg) scale(1.01);
+                opacity: 0.5;
+            }
+        }
+        
+        /* ホームセクション - ヒーロー山景 */
+        #home {
+            position: relative;
+            background: 
+                /* ダイナミック光源効果 */
+                radial-gradient(ellipse 1200px 600px at 40% 20%, rgba(255, 215, 0, 0.3), transparent 80%),
+                radial-gradient(ellipse 800px 400px at 80% 70%, rgba(138, 43, 226, 0.25), transparent 70%),
+                radial-gradient(ellipse 1000px 300px at 60% 90%, rgba(0, 191, 255, 0.15), transparent 60%),
+                /* メイン山景 - 右上配置 */
+                url('./mountain.png') 75% 25% / 120% auto no-repeat,
+                /* ベースダーク */
+                linear-gradient(135deg, 
+                    rgba(8, 12, 20, 0.9) 0%,
+                    rgba(15, 25, 35, 0.8) 50%,
+                    rgba(5, 15, 25, 0.95) 100%);
+            background-attachment: fixed;
+            background-blend-mode: screen, multiply, soft-light, hard-light, normal;
+            min-height: 100vh;
+            overflow: hidden;
+        }
+        
+        /* アバウトセクション - 神秘の森 */
+        #about {
+            position: relative;
+            background: 
+                /* 森の光フィルター */
+                radial-gradient(ellipse 1000px 500px at 20% 40%, rgba(0, 191, 255, 0.2), transparent 70%),
+                radial-gradient(ellipse 800px 400px at 80% 80%, rgba(50, 205, 50, 0.15), transparent 60%),
+                /* 森林 - 左下重点配置 */
+                url('./forest.png') 15% 70% / 110% auto no-repeat,
+                /* 深い森のベース */
+                linear-gradient(225deg, 
+                    rgba(5, 15, 10, 0.9) 0%,
+                    rgba(10, 25, 20, 0.8) 60%,
+                    rgba(15, 35, 25, 0.9) 100%);
+            background-attachment: fixed;
+            background-blend-mode: color-dodge, multiply, luminosity, normal;
+            overflow: hidden;
+        }
+        
+        /* ポートフォリオセクション - 幻想湖景 */
+        #portfolio {
+            position: relative;
+            z-index: 1;
+        }
+        
+        #portfolio::before {
+            content: "";
             position: absolute;
             top: 0;
             left: 0;
             right: 0;
             bottom: 0;
-            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='4'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.08'/%3E%3C/svg%3E");
-            pointer-events: none;
+            z-index: -1;
+            background: 
+                /* 湖面の反射光 */
+                radial-gradient(ellipse 1200px 400px at 50% 100%, rgba(255, 215, 0, 0.25), transparent 80%),
+                radial-gradient(ellipse 600px 800px at 30% 50%, rgba(0, 191, 255, 0.2), transparent 70%),
+                /* 湖景 - 中央下配置 */
+                url('./lake.png') 50% 85% / 130% auto no-repeat,
+                /* 湖水の深み */
+                linear-gradient(180deg, 
+                    rgba(10, 20, 30, 0.9) 0%,
+                    rgba(15, 30, 45, 0.8) 40%,
+                    rgba(5, 15, 35, 0.95) 100%);
+            background-attachment: fixed;
+            background-blend-mode: screen, soft-light, overlay, normal;
         }
-        .scroll-bounce {
-            animation: bounce 2s infinite;
+        
+        /* コンタクトセクション - 雄大な山脈 */
+        #contact {
+            position: relative;
+            background: 
+                /* 山頂の神秘光 */
+                radial-gradient(ellipse 1000px 600px at 70% 30%, rgba(138, 43, 226, 0.3), transparent 80%),
+                radial-gradient(ellipse 800px 400px at 30% 70%, rgba(255, 215, 0, 0.2), transparent 70%),
+                /* 山景 - 右上重点 */
+                url('./mountain.png') 80% 20% / 125% auto no-repeat,
+                /* 威厳ある夜空 */
+                linear-gradient(315deg, 
+                    rgba(8, 5, 15, 0.95) 0%,
+                    rgba(15, 10, 25, 0.9) 50%,
+                    rgba(10, 8, 20, 0.98) 100%);
+            background-attachment: fixed;
+            background-blend-mode: color-dodge, screen, hard-light, normal;
+            overflow: hidden;
         }
-        .hover-lift {
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        
+        /* セクション全体の視覚的強化 */
+        section {
+            position: relative;
+            z-index: 1;
         }
-        .hover-lift:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        
+        /* プレミアムコンテンツ可読性 */
+        .cyber-glass {
+            backdrop-filter: blur(15px) saturate(180%);
+            background: rgba(15, 25, 35, 0.9) !important;
+            border: 2px solid rgba(0, 255, 255, 0.3);
+            box-shadow: 
+                0 8px 32px rgba(0, 0, 0, 0.4),
+                inset 0 1px 0 rgba(0, 255, 255, 0.2),
+                0 0 20px rgba(0, 255, 255, 0.1);
         }
+        
+        .stone-tablet {
+            backdrop-filter: blur(12px) contrast(120%);
+            background: rgba(26, 26, 46, 0.85) !important;
+            border: 2px solid rgba(136, 136, 153, 0.4);
+            box-shadow: 
+                0 6px 24px rgba(0, 0, 0, 0.3),
+                inset 0 1px 0 rgba(255, 255, 255, 0.1);
+        }
+        
+        /* セクション間の視覚的分離 */
+        section {
+            position: relative;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+        section:first-child {
+            border-top: none;
+        }
+        
+        /* ポートフォリオグリッド */
+        /* masonry-grid CSS重複を削除 */
+
+        .masonry-item {
+            display: block !important;
+            width: 100% !important;
+            position: relative !important;
+            z-index: 1000 !important;
+            margin-bottom: 2rem;
+        }
+
+        /* トラックカードの強化 */
+        .track-card {
+            backdrop-filter: blur(20px) brightness(110%);
+            background: rgba(20, 30, 40, 0.95) !important;
+            border: 1px solid rgba(0, 255, 255, 0.25);
+            box-shadow: 
+                0 10px 40px rgba(0, 0, 0, 0.3),
+                0 0 30px rgba(0, 255, 255, 0.05);
+            transition: all 0.3s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            z-index: 1000;
+            isolation: isolate;
+        }
+
+        .track-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 45px rgba(0, 255, 255, 0.1);
+        }
+
+        .player-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+            border-radius: 0.5rem;
+            background: rgba(0, 0, 0, 0.2);
+            margin-bottom: 1rem;
+        }
+
+        .platform-icons {
+            display: flex;
+            gap: 0.75rem;
+            margin: 1rem 0;
+        }
+
+        .platform-icon {
+            width: 36px;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .platform-icon:hover {
+            background: rgba(99, 102, 241, 0.3);
+            transform: scale(1.1);
+        }
+
+        .platform-icon.active {
+            background: rgba(99, 102, 241, 0.5);
+        }
+
+        .platform-icon svg {
+            width: 20px;
+            height: 20px;
+        }
+
+        .youtube { color: #FF0000; }
+        .spotify { color: #1DB954; }
+        .soundcloud { color: #FF5500; }
+        
+        
     </style>
 </head>
-<body class="bg-midnight text-mistsilver font-inter antialiased dark:bg-gray-900">
+<body class="text-mistsilver font-sans overflow-x-hidden">
+    <!-- メインコンテンツラッパー -->
+    <div id="main-content">
+        <!-- Dynamic Forest Background Canvas -->
+        <canvas id="hero-canvas"></canvas>
     
     <!-- Header -->
-    <header class="fixed top-0 w-full z-50 glass-morphism">
-        <nav class="container mx-auto px-6 py-4 flex items-center justify-between">
-            <div class="flex items-center space-x-3">
-                <img src="/assets/avatar-harp-maiden.png" alt="CelticDreamscape Avatar" class="w-10 h-10 rounded-full ring-2 ring-emerald/30">
-                <span class="font-cinzel text-xl font-bold tracking-wide text-mistsilver">CelticDreamscape</span>
-            </div>
-            <div class="hidden md:flex items-center space-x-8">
-                <a href="#home" class="text-mistsilver/80 hover:text-emerald transition-colors duration-300">Home</a>
-                <a href="#about" class="text-mistsilver/80 hover:text-emerald transition-colors duration-300">About</a>
-                <a href="#videos" class="text-mistsilver/80 hover:text-emerald transition-colors duration-300">Videos</a>
-                <a href="#contact" class="text-mistsilver/80 hover:text-emerald transition-colors duration-300">Contact</a>
-                <button id="dark-toggle" class="p-2 rounded-full text-mistsilver/80 hover:text-warmgold hover:bg-white/10 transition-all duration-300" aria-label="Toggle dark mode">
-                    <i data-feather="moon" class="w-5 h-5"></i>
+    <header class="fixed top-0 w-full z-50 cyber-glass">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="text-2xl font-bold">
+                    <span class="text-white">Celtic</span><span class="text-white">Dreamscape</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="nav-link hover:text-cyber-blue transition-colors duration-300">Home</a>
+                    <a href="#about" class="nav-link hover:text-cyber-blue transition-colors duration-300">About</a>
+                    <a href="#portfolio" class="nav-link hover:text-cyber-blue transition-colors duration-300">Portfolio</a>
+                    <a href="#contact" class="nav-link hover:text-cyber-blue transition-colors duration-300">Contact</a>
+                </div>
+                <button class="md:hidden text-cyber-blue" id="mobile-menu-toggle">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
                 </button>
             </div>
-            <button id="mobile-menu" class="md:hidden p-2 text-mistsilver" aria-label="Toggle mobile menu">
-                <i data-feather="menu" class="w-6 h-6"></i>
-            </button>
+            <!-- Mobile Menu -->
+            <div class="mobile-menu hidden md:hidden mt-4 cyber-glass rounded-lg p-4">
+                <div class="flex flex-col space-y-4">
+                    <a href="#home" class="nav-link hover:text-cyber-blue transition-colors duration-300">Home</a>
+                    <a href="#about" class="nav-link hover:text-cyber-blue transition-colors duration-300">About</a>
+                    <a href="#portfolio" class="nav-link hover:text-cyber-blue transition-colors duration-300">Portfolio</a>
+                    <a href="#contact" class="nav-link hover:text-cyber-blue transition-colors duration-300">Contact</a>
+                </div>
+            </div>
         </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="relative min-h-screen flex items-center justify-center overflow-hidden grain-overlay">
-        <div class="absolute inset-0 z-0">
-            <img src="/assets/hero-celtic-mountain.jpg" alt="Celtic Mountain Landscape" class="w-full h-full object-cover scale-105">
-            <div class="absolute inset-0 bg-gradient-to-b from-midnight/60 via-deepteal/50 to-midnight/80"></div>
-        </div>
+    <!-- Home Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center px-6 relative overflow-hidden">
+        <!-- 背景動画 -->
+        <video 
+            id="background-video" 
+            autoplay 
+            muted 
+            loop 
+            playsinline
+            class="absolute top-0 left-0 w-full h-full object-cover z-0"
+            style="filter: brightness(0.75) contrast(1.2) saturate(1.1);"
+        >
+            <source src="background-video3.mp4" type="video/mp4">
+        </video>
         
-        <div class="relative z-10 text-center max-w-5xl mx-6">
-            <div class="glass-morphism p-12 md:p-16 rounded-3xl backdrop-blur-2xl">
-                <h1 class="font-cinzel text-5xl md:text-7xl lg:text-8xl font-bold tracking-wide mb-8 bg-gradient-to-r from-mistsilver via-emerald to-mistsilver bg-clip-text text-transparent">
-                    CelticDreamscape
-                </h1>
-                <p class="text-xl md:text-2xl lg:text-3xl mb-4 text-mistsilver/90 font-medium leading-relaxed">
-                    Step into a world of Celtic magic — ambient soundscapes & timeless melodies.
-                </p>
-                <p class="text-lg md:text-xl mb-12 text-mistsilver/70 font-inter">
-                    「ケルトの魔法へ — 癒しと幻想のサウンドスケープ」
-                </p>
-                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                    <a href="https://youtube.com/@celticdreamscape-i2k?sub_confirmation=1" target="_blank" rel="noopener" 
-                       class="inline-flex items-center px-8 py-4 bg-emerald hover:bg-emerald/80 text-white font-medium rounded-full transition-all duration-300 hover:shadow-lg hover:shadow-emerald/30 hover:scale-105">
-                        <i data-feather="youtube" class="w-5 h-5 mr-2"></i>
-                        Subscribe on YouTube
-                    </a>
-                    <div class="flex gap-3">
-                        <a href="https://x.com/CelticDrea83998" target="_blank" rel="noopener" 
-                           class="p-4 bg-white/10 hover:bg-warmgold/20 rounded-full transition-all duration-300 hover:scale-110" aria-label="Follow on X">
-                            <i data-feather="twitter" class="w-5 h-5"></i>
-                        </a>
-                        <a href="https://ko-fi.com/celticdreamscape" target="_blank" rel="noopener" 
-                           class="p-4 bg-white/10 hover:bg-warmgold/20 rounded-full transition-all duration-300 hover:scale-110" aria-label="Support on Ko-fi">
-                            <i data-feather="coffee" class="w-5 h-5"></i>
-                        </a>
+        <!-- 動画オーバーレイ -->
+        <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-black/30 via-transparent to-black/50 z-1"></div>
+        
+        <!-- 動く光の粒子 -->
+        <div class="floating-particles"></div>
+        
+        <div class="text-center max-w-5xl relative z-10 px-4">
+            <!-- Epic キャッチコピー -->
+            <div class="relative mb-20 fade-in-on-scroll group">
+                <!-- Mystical Background Elements -->
+                <div class="absolute inset-0 -m-8">
+                    <!-- Floating Orbs -->
+                    <div class="absolute top-8 left-8 w-24 h-24 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-full blur-xl animate-pulse"></div>
+                    <div class="absolute bottom-8 right-8 w-32 h-32 bg-gradient-to-br from-emerald-400/15 to-green-500/15 rounded-full blur-2xl" style="animation: float 8s ease-in-out infinite;"></div>
+                    <div class="absolute top-1/2 left-1/4 w-16 h-16 bg-gradient-to-br from-purple-400/25 to-violet-500/25 rounded-full blur-lg" style="animation: float 6s ease-in-out infinite reverse;"></div>
+                    <div class="absolute top-1/4 right-1/3 w-20 h-20 bg-gradient-to-br from-yellow-400/20 to-orange-500/20 rounded-full blur-xl animate-ping"></div>
+                </div>
+
+                <!-- Shimmer Background -->
+                <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/3 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-2000"></div>
+
+                <!-- Main Content -->
+                <div class="relative z-10 text-center">
+                    <!-- Mystical Symbol -->
+                    <div class="mb-8">
+                        <div class="text-6xl animate-spin-slow inline-block opacity-70" style="animation: spin 25s linear infinite;">✦</div>
                     </div>
+
+                    <!-- Epic Typography -->
+                    <div class="space-y-6">
+                        <!-- First Line -->
+                        <div class="relative">
+                            <p class="text-4xl md:text-5xl lg:text-6xl font-jp-gothic leading-relaxed font-medium">
+                                <span class="relative">
+                                    <span class="absolute inset-0 text-cyan-400 blur-sm opacity-60">ヘッドフォンを装着した瞬間、</span>
+                                    <span class="relative text-white">ヘッドフォンを装着した瞬間、</span>
+                                </span>
+                                <br>
+                                <span class="relative">
+                                    <span class="absolute inset-0 text-emerald-400 blur-sm opacity-60">世界は静まり</span>
+                                    <span class="relative text-white">世界は静まり</span>
+                                </span>
+                            </p>
+                        </div>
+
+                        <!-- Second Line - Main Title -->
+                        <div class="relative py-6">
+                            <!-- Epic Glow Background -->
+                            <div class="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/15 to-emerald-500/10 rounded-3xl blur-xl"></div>
+                            
+                            <div class="relative">
+                                <span class="font-black text-5xl md:text-7xl lg:text-8xl relative block">
+                                    <!-- Multiple Glow Layers -->
+                                    <span class="absolute inset-0 text-transparent bg-gradient-to-r from-cyan-400 via-purple-400 to-emerald-400 bg-clip-text blur-sm opacity-80">"ケルトの旅"</span>
+                                    <span class="absolute inset-0 text-transparent bg-gradient-to-r from-blue-300 via-violet-300 to-green-300 bg-clip-text blur-md opacity-60">"ケルトの旅"</span>
+                                    <span class="relative text-transparent bg-gradient-to-r from-cyan-300 via-purple-300 to-emerald-300 bg-clip-text">"ケルトの旅"</span>
+                                </span>
+                                <span class="text-4xl md:text-5xl lg:text-6xl font-jp-gothic text-white font-medium ml-4">が始まる。</span>
+                            </div>
+                        </div>
+
+                        <!-- Third Line -->
+                        <div class="relative pt-4">
+                            <p class="text-4xl md:text-5xl lg:text-6xl font-jp-gothic font-bold">
+                                <span class="relative">
+                                    <span class="absolute inset-0 text-emerald-400 blur-sm opacity-70">今すぐ</span>
+                                    <span class="relative text-white">今すぐ</span>
+                                </span>
+                                <span class="relative">
+                                    <span class="absolute inset-0 text-cyan-400 blur-sm opacity-70">癒やしの森へ</span>
+                                    <span class="relative text-transparent bg-gradient-to-r from-emerald-300 to-green-300 bg-clip-text">癒やしの森へ</span>
+                                </span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Decorative Elements -->
+                    <div class="mt-12 flex justify-center items-center gap-8">
+                        <div class="w-24 h-0.5 bg-gradient-to-r from-transparent via-cyan-400 to-transparent opacity-60"></div>
+                        <div class="text-3xl animate-pulse opacity-70">🎧</div>
+                        <div class="w-24 h-0.5 bg-gradient-to-r from-transparent via-emerald-400 to-transparent opacity-60"></div>
+                    </div>
+
+                    <!-- Floating Musical Notes -->
+                    <div class="absolute -top-4 -left-4 text-2xl animate-bounce opacity-60" style="animation-delay: 0s;">🎵</div>
+                    <div class="absolute -top-8 -right-8 text-xl animate-bounce opacity-50" style="animation-delay: 1s;">🎶</div>
+                    <div class="absolute -bottom-4 left-1/4 text-lg animate-bounce opacity-40" style="animation-delay: 2s;">♪</div>
+                    <div class="absolute -bottom-8 right-1/4 text-xl animate-bounce opacity-60" style="animation-delay: 1.5s;">♫</div>
                 </div>
             </div>
-        </div>
-        
-        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 scroll-bounce">
-            <a href="#about" class="block p-2 text-mistsilver/60 hover:text-emerald transition-colors">
-                <i data-feather="chevron-down" class="w-8 h-8"></i>
-            </a>
+            
+                
+                <!-- Featured Audio Player -->
+                <div class="max-w-md mx-auto mb-20">
+                    <div class="cyber-glass p-4 rounded-2xl">
+                        <!-- Epic Music Player Card -->
+                        <div class="group relative overflow-hidden bg-gradient-to-br from-slate-900/60 via-indigo-900/40 to-slate-900/60 backdrop-blur-2xl border-2 border-gradient-to-r from-cyber-blue/40 via-purple-400/40 to-emerald-400/40 rounded-3xl p-6 shadow-[0_0_60px_rgba(0,0,0,0.8)] hover:shadow-[0_0_100px_rgba(0,255,255,0.3)] transition-all duration-700">
+                            
+                            <!-- Floating Magical Orbs -->
+                            <div class="absolute top-4 right-4 w-20 h-20 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-full blur-xl animate-pulse"></div>
+                            <div class="absolute bottom-6 left-6 w-16 h-16 bg-gradient-to-br from-purple-400/25 to-violet-500/25 rounded-full blur-lg" style="animation: float 5s ease-in-out infinite;"></div>
+                            <div class="absolute top-1/2 right-1/3 w-12 h-12 bg-gradient-to-br from-emerald-400/30 to-green-500/30 rounded-full blur-md animate-ping"></div>
+                            
+                            <!-- Shimmer Effect -->
+                            <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1500"></div>
+                            
+                            <div class="relative z-10">
+                                <!-- Album Art with Epic Effects -->
+                                <div class="relative mb-8 group/image">
+                                    <div class="absolute inset-0 bg-gradient-to-r from-cyan-400/20 via-purple-400/20 to-emerald-400/20 rounded-2xl blur-xl group-hover/image:blur-2xl transition-all duration-500"></div>
+                                    <img 
+                                        src="celtic-music.png" 
+                                        alt="Celtic Dreamscape Music" 
+                                        class="relative w-full max-w-sm mx-auto rounded-2xl shadow-[0_0_50px_rgba(0,255,255,0.2)] border-2 border-cyber-blue/40 hover:border-cyan-300/70 hover:scale-105 transition-all duration-500 hover:shadow-[0_0_80px_rgba(0,255,255,0.4)]"
+                                    />
+                                    <!-- Mystical Glow Overlay -->
+                                    <div class="absolute inset-0 bg-gradient-to-br from-cyan-400/10 via-transparent to-purple-400/10 rounded-2xl opacity-0 group-hover/image:opacity-100 transition-opacity duration-500"></div>
+                                    
+                                    <!-- Floating Note Icons -->
+                                    <div class="absolute -top-2 -right-2 text-2xl animate-bounce" style="animation-delay: 0s;">🎵</div>
+                                    <div class="absolute -bottom-2 -left-2 text-xl animate-bounce" style="animation-delay: 0.5s;">🎶</div>
+                                </div>
+                                
+                                <!-- Epic Audio Player -->
+                                <div class="relative bg-gradient-to-r from-slate-800/80 via-indigo-900/60 to-slate-800/80 backdrop-blur-xl rounded-2xl p-6 border border-cyber-blue/30 hover:border-cyan-300/60 transition-all duration-500 mb-6">
+                                    <!-- Audio Wave Animation Background -->
+                                    <div class="absolute inset-0 bg-gradient-to-r from-transparent via-cyan-400/5 to-transparent rounded-2xl"></div>
+                                    
+                                    <div class="relative z-10">
+                                        <!-- Title and Description -->
+                                        <div class="text-center mb-6">
+                                            <h3 class="text-2xl font-bold bg-gradient-to-r from-cyan-300 via-blue-300 to-cyan-300 bg-clip-text text-transparent mb-2">
+                                                🌟 Featured Track 🌟
+                                            </h3>
+                                            <p class="text-cyan-300 text-lg font-semibold mb-1">Celtic Dreamscape</p>
+                                            <p class="text-emerald-300 text-sm">✨ Immerse yourself in the mystical Celtic soundscape ✨</p>
+                                        </div>
+                                        
+                                        <!-- Standard Audio Player -->
+                                        <audio 
+                                            id="featuredAudio" 
+                                            controls 
+                                            controlslist="noplaybackrate nofullscreen noremoteplayback"
+                                            disablepictureinpicture
+                                            preload="auto"
+                                            class="w-full mb-4 rounded-xl"
+                                            style="height: 60px; filter: hue-rotate(180deg) saturate(1.5);">
+                                            <source src="celtic-music.mp3" type="audio/mpeg">
+                                            <source src="./celtic-music.mp3" type="audio/mpeg">
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                        
+                                        <!-- Epic Play Button -->
+                                        <div class="text-center">
+                                            <button id="manualPlayBtn" class="group/btn relative overflow-hidden bg-gradient-to-r from-emerald-500 via-green-500 to-emerald-500 hover:from-emerald-400 hover:via-green-400 hover:to-emerald-400 text-white px-8 py-4 rounded-full font-bold text-lg transition-all duration-300 transform hover:scale-110 hover:shadow-[0_0_40px_rgba(34,197,94,0.6)] border-2 border-emerald-400/50 hover:border-emerald-300">
+                                                <!-- Button Shimmer -->
+                                                <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover/btn:translate-x-full transition-transform duration-700"></div>
+                                                
+                                                <span class="relative z-10 flex items-center gap-3">
+                                                    <span class="text-2xl animate-pulse">🎵</span>
+                                                    Click Here to Play Music
+                                                    <span class="text-2xl animate-pulse" style="animation-delay: 0.5s;">🎶</span>
+                                                </span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Decorative Corner Elements -->
+                                    <div class="absolute top-2 left-2 w-3 h-3 bg-cyan-400 rounded-full opacity-60 animate-ping"></div>
+                                    <div class="absolute top-2 right-2 w-3 h-3 bg-purple-400 rounded-full opacity-60 animate-ping" style="animation-delay: 0.3s;"></div>
+                                    <div class="absolute bottom-2 left-2 w-3 h-3 bg-emerald-400 rounded-full opacity-60 animate-ping" style="animation-delay: 0.6s;"></div>
+                                    <div class="absolute bottom-2 right-2 w-3 h-3 bg-yellow-400 rounded-full opacity-60 animate-ping" style="animation-delay: 0.9s;"></div>
+                                </div>
+                                
+                                <!-- Mystical Footer Message -->
+                                <div class="text-center">
+                                    <div class="inline-flex items-center gap-2 bg-gradient-to-r from-purple-900/50 to-emerald-900/50 backdrop-blur-lg px-6 py-3 rounded-full border border-purple-400/30">
+                                        <span class="text-2xl animate-spin" style="animation-duration: 4s;">✦</span>
+                                        <p class="text-purple-300 font-medium">Journey into the realm of digital druidism</p>
+                                        <span class="text-2xl animate-spin" style="animation-duration: 4s; animation-direction: reverse;">✦</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-20 bg-gradient-to-b from-deepteal/20 to-midnight">
-        <div class="container mx-auto px-6">
-            <div class="grid lg:grid-cols-2 gap-16 items-center max-w-6xl mx-auto">
-                <div class="text-center lg:text-left order-2 lg:order-1">
-                    <img src="/assets/avatar-harp-maiden.png" alt="CelticDreamscape Avatar" 
-                         class="w-40 h-40 rounded-full mx-auto lg:mx-0 mb-8 ring-4 ring-emerald/30 shadow-2xl">
+    <section id="about" class="py-16 px-6" style="background: rgba(26, 26, 46, 0.85);">
+        <div class="container mx-auto max-w-6xl">
+            <h2 class="text-4xl font-bold text-center mb-12 glitch fade-in-on-scroll">
+                <span class="neon-glow">Digital</span> <span class="cyber-glow">Mysticism</span>
+            </h2>
+            
+            <div class="grid md:grid-cols-3 gap-8 mb-16">
+                <!-- Subscribers Card -->
+                <div class="group relative overflow-hidden bg-gradient-to-br from-indigo-900/30 via-cyber-blue/20 to-blue-900/30 backdrop-blur-xl border-2 border-cyber-blue/40 rounded-3xl p-10 text-center fade-in-on-scroll hover:scale-110 transition-all duration-700 hover:border-cyan-300/80 hover:shadow-[0_0_50px_rgba(0,255,255,0.4)] hover:rotate-1">
+                    <!-- Animated Background Orbs -->
+                    <div class="absolute top-4 right-4 w-16 h-16 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full opacity-20 animate-ping"></div>
+                    <div class="absolute bottom-4 left-4 w-12 h-12 bg-gradient-to-r from-blue-400 to-cyan-500 rounded-full opacity-30 animate-bounce"></div>
                     
-                    <div class="grid grid-cols-3 gap-6 mb-8">
-                        <div class="text-center p-4 bg-white/5 rounded-xl backdrop-blur-sm">
-                            <div class="text-3xl font-bold text-emerald font-cinzel">94</div>
-                            <div class="text-sm text-mistsilver/70 mt-1">Subscribers</div>
+                    <!-- Shimmer Effect -->
+                    <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
+                    
+                    <div class="relative z-10">
+                        <!-- Icon -->
+                        <div class="text-4xl mb-4 animate-bounce">👥</div>
+                        
+                        <!-- Number with Animated Gradient -->
+                        <div class="text-8xl font-black mb-4 relative">
+                            <div class="absolute inset-0 text-8xl font-black text-transparent bg-gradient-to-r from-cyan-400 via-blue-400 to-cyan-400 bg-clip-text animate-pulse">100</div>
+                            <div class="text-8xl font-black text-white opacity-80">100</div>
                         </div>
-                        <div class="text-center p-4 bg-white/5 rounded-xl backdrop-blur-sm">
-                            <div class="text-3xl font-bold text-emerald font-cinzel">34</div>
-                            <div class="text-sm text-mistsilver/70 mt-1">Videos</div>
-                        </div>
-                        <div class="text-center p-4 bg-white/5 rounded-xl backdrop-blur-sm">
-                            <div class="text-3xl font-bold text-emerald font-cinzel">2+</div>
-                            <div class="text-sm text-mistsilver/70 mt-1">Years</div>
-                        </div>
+                        
+                        <div class="text-2xl text-cyan-300 font-bold mb-3 tracking-wider">Subscribers</div>
+                        <div class="text-base text-emerald-300 font-medium mb-6">デジタル・ピルグリム</div>
+                        
+                        <a href="https://youtube.com/@celticdreamscape-i2k" target="_blank" 
+                           class="group/btn inline-flex items-center gap-2 relative overflow-hidden bg-gradient-to-r from-red-600 to-red-700 hover:from-red-500 hover:to-red-600 text-white px-6 py-3 rounded-full font-bold transition-all duration-300 transform hover:scale-110 hover:shadow-[0_0_30px_rgba(239,68,68,0.6)] border border-red-500/50">
+                            <!-- YouTube Icon -->
+                            <svg class="w-5 h-5 relative z-10" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136C4.495 20.455 12 20.455 12 20.455s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                            </svg>
+                            <span class="relative z-10">@celticdreamscape-i2k</span>
+                            <div class="absolute inset-0 bg-gradient-to-r from-red-700 to-red-600 opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300"></div>
+                        </a>
                     </div>
                 </div>
+
+                <!-- Video Chronicles Card -->
+                <div class="group relative overflow-hidden bg-gradient-to-br from-purple-900/30 via-violet-800/20 to-purple-900/30 backdrop-blur-xl border-2 border-purple-400/40 rounded-3xl p-10 text-center fade-in-on-scroll hover:scale-110 transition-all duration-700 hover:border-violet-300/80 hover:shadow-[0_0_50px_rgba(147,51,234,0.4)] hover:-rotate-1">
+                    <!-- Animated Background Orbs -->
+                    <div class="absolute top-6 left-6 w-14 h-14 bg-gradient-to-r from-purple-400 to-violet-500 rounded-full opacity-25 animate-pulse"></div>
+                    <div class="absolute bottom-6 right-6 w-10 h-10 bg-gradient-to-r from-violet-400 to-purple-500 rounded-full opacity-30" style="animation: float 3s ease-in-out infinite;"></div>
+                    
+                    <!-- Shimmer Effect -->
+                    <div class="absolute inset-0 bg-gradient-to-r from-transparent via-purple-300/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
+                    
+                    <div class="relative z-10">
+                        <!-- Icon -->
+                        <div class="text-4xl mb-4 animate-bounce" style="animation-delay: 0.2s;">🎬</div>
+                        
+                        <!-- Number -->
+                        <div class="text-8xl font-black mb-4 relative">
+                            <div class="absolute inset-0 text-8xl font-black text-transparent bg-gradient-to-r from-purple-400 via-violet-400 to-purple-400 bg-clip-text animate-pulse">33</div>
+                            <div class="text-8xl font-black text-white opacity-80">33</div>
+                        </div>
+                        
+                        <div class="text-2xl text-purple-300 font-bold mb-3 tracking-wider">Video Chronicles</div>
+                        <div class="text-base text-emerald-300 font-medium">音響の儀式</div>
+                    </div>
+                </div>
+
+                <!-- Total Views Card -->
+                <div class="group relative overflow-hidden bg-gradient-to-br from-emerald-900/30 via-green-800/20 to-emerald-900/30 backdrop-blur-xl border-2 border-emerald-400/40 rounded-3xl p-10 text-center fade-in-on-scroll hover:scale-110 transition-all duration-700 hover:border-green-300/80 hover:shadow-[0_0_50px_rgba(34,197,94,0.4)] hover:rotate-1">
+                    <!-- Animated Background Orbs -->
+                    <div class="absolute top-3 right-3 w-18 h-18 bg-gradient-to-r from-emerald-400 to-green-500 rounded-full opacity-20" style="animation: spin 4s linear infinite;"></div>
+                    <div class="absolute bottom-3 left-3 w-8 h-8 bg-gradient-to-r from-green-400 to-emerald-500 rounded-full opacity-35 animate-ping"></div>
+                    
+                    <!-- Shimmer Effect -->
+                    <div class="absolute inset-0 bg-gradient-to-r from-transparent via-green-300/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
+                    
+                    <div class="relative z-10">
+                        <!-- Icon -->
+                        <div class="text-4xl mb-4 animate-bounce" style="animation-delay: 0.4s;">👁️</div>
+                        
+                        <!-- Number -->
+                        <div class="text-8xl font-black mb-4 relative">
+                            <div class="absolute inset-0 text-8xl font-black text-transparent bg-gradient-to-r from-emerald-400 via-green-400 to-emerald-400 bg-clip-text animate-pulse">8.0K</div>
+                            <div class="text-8xl font-black text-white opacity-80">8.0K</div>
+                        </div>
+                        
+                        <div class="text-2xl text-emerald-300 font-bold mb-3 tracking-wider">Total Views</div>
+                        <div class="text-base text-emerald-300 font-medium">デジタル・ドルイドの影響</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="group relative overflow-hidden bg-gradient-to-br from-slate-900/40 via-indigo-900/30 to-slate-900/40 backdrop-blur-2xl border-2 border-gradient-to-r from-cyber-blue/30 via-purple-400/30 to-emerald-400/30 rounded-3xl p-12 shadow-[0_0_60px_rgba(0,0,0,0.8)] hover:shadow-[0_0_80px_rgba(0,255,255,0.2)] transition-all duration-700">
+                <!-- Animated Background Elements -->
+                <div class="absolute inset-0 bg-gradient-to-br from-cyber-blue/5 via-purple-500/5 to-emerald-400/5 opacity-60"></div>
                 
-                <div class="order-1 lg:order-2">
-                    <h2 class="font-cinzel text-4xl lg:text-5xl font-bold mb-8 tracking-wide text-mistsilver">
-                        About CelticDreamscape
-                    </h2>
-                    <div class="space-y-6 text-lg leading-relaxed">
-                        <p class="text-mistsilver/90">
-                            Welcome to a realm where ancient Celtic melodies meet modern ambient artistry. Our channel creates immersive soundscapes that transport you to mystical forests, moonlit lakes, and windswept highlands.
-                        </p>
-                        <p class="text-mistsilver/80">
-                            Each composition is carefully crafted to provide the perfect backdrop for meditation, study, sleep, or simply escaping into the magical world of Celtic lore and legend.
-                        </p>
-                        <p class="text-mistsilver/70">
-                            Join our growing community of dreamers and let the timeless beauty of Celtic music guide you to tranquility.
-                        </p>
+                <!-- Floating Orbs -->
+                <div class="absolute top-8 right-8 w-24 h-24 bg-gradient-to-br from-cyan-400/30 to-blue-500/30 rounded-full blur-xl animate-pulse"></div>
+                <div class="absolute bottom-8 left-8 w-32 h-32 bg-gradient-to-br from-purple-400/20 to-violet-500/20 rounded-full blur-2xl" style="animation: float 4s ease-in-out infinite;"></div>
+                <div class="absolute top-1/2 left-1/3 w-16 h-16 bg-gradient-to-br from-emerald-400/25 to-green-500/25 rounded-full blur-lg" style="animation: float 6s ease-in-out infinite reverse;"></div>
+                
+                <!-- Shimmer Effect -->
+                <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1500"></div>
+                
+                <div class="relative z-10">
+                    <!-- Mystical Symbol -->
+                    <div class="text-center mb-8">
+                        <div class="text-6xl animate-spin-slow inline-block" style="animation: spin 20s linear infinite;">✦</div>
+                    </div>
+                    
+                    <p class="font-jp-serif text-2xl leading-relaxed text-center text-white/95 relative">
+                        <!-- Glowing Keywords -->
+                        <span class="relative">
+                            <span class="absolute inset-0 text-cyber-blue blur-sm">CelticDreamscape</span>
+                            <span class="relative text-cyan-300 font-bold text-3xl">CelticDreamscape</span>
+                        </span>は、
+                        
+                        <span class="text-purple-300 font-semibold bg-gradient-to-r from-purple-400 to-violet-400 bg-clip-text text-transparent">古代ケルトの神話</span>と
+                        <span class="text-cyber-blue font-semibold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">現代のサイバネティクス</span>を融合させた、
+                        
+                        <span class="relative">
+                            <span class="absolute inset-0 text-emerald-400 blur-sm opacity-50">新しい形の音響体験</span>
+                            <span class="relative text-emerald-300 font-bold text-2xl">新しい形の音響体験</span>
+                        </span>を創造しています。
+                        
+                        <br><br>
+                        
+                        <span class="relative">
+                            <span class="absolute inset-0 text-purple-400 blur-sm opacity-60">デジタル・ドルイド</span>
+                            <span class="relative text-purple-300 font-bold text-3xl">✨ デジタル・ドルイド ✨</span>
+                        </span>として、
+                        
+                        失われた叡智をシンセティック・サウンドスケープの中に甦らせ、
+                        聴く者を
+                        
+                        <span class="relative">
+                            <span class="absolute inset-0 text-emerald-400 blur-sm opacity-50">神秘の森</span>
+                            <span class="relative text-emerald-300 font-bold text-2xl">🌲 神秘の森 🌲</span>
+                        </span>へと誘います。
+                    </p>
+                    
+                    <!-- Decorative Line -->
+                    <div class="mt-8 flex justify-center">
+                        <div class="w-48 h-0.5 bg-gradient-to-r from-transparent via-cyber-blue to-transparent opacity-60"></div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Featured Videos -->
-    <section id="videos" class="py-20 bg-midnight">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="font-cinzel text-4xl lg:text-5xl font-bold mb-4 tracking-wide text-mistsilver">Featured Videos</h2>
-                <p class="text-lg text-mistsilver/70 max-w-2xl mx-auto">Our most enchanting Celtic soundscapes, carefully selected for your journey into tranquility</p>
-            </div>
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-20 px-6" style="background: rgba(26, 26, 46, 0.85);">
+        <div class="container mx-auto max-w-7xl" style="position: relative; z-index: 10;">
+            <h2 class="text-4xl font-bold text-center mb-16 glitch fade-in-on-scroll">
+                <span class="neon-glow">Sonic</span> <span class="cyber-glow">Chronicles</span>
+            </h2>
             
-            <div class="grid md:grid-cols-2 xl:grid-cols-4 gap-8 mb-20">
-                <div class="group hover-lift bg-deepteal/30 rounded-2xl overflow-hidden cursor-pointer" onclick="openModal('dQw4w9WgXcQ')">
-                    <div class="relative overflow-hidden">
-                        <img src="https://img.youtube.com/vi/dQw4w9WgXcQ/hqdefault.jpg" alt="Emerald Rain over Quiet River" 
-                             class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                        <div class="absolute top-4 right-4 bg-black/50 rounded-full p-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            <i data-feather="play" class="w-6 h-6 text-white"></i>
+            <div class="grid lg:grid-cols-1 gap-12">
+                <!-- Digital Druid Chronicles I -->
+                <div class="group relative overflow-hidden bg-gradient-to-br from-indigo-900/40 via-cyan-800/30 to-indigo-900/40 backdrop-blur-2xl border-2 border-cyan-400/40 rounded-3xl p-8 shadow-[0_0_60px_rgba(0,0,0,0.8)] hover:shadow-[0_0_100px_rgba(0,255,255,0.3)] transition-all duration-700 hover:scale-[1.02]">
+                    <!-- Floating Orbs -->
+                    <div class="absolute top-6 right-6 w-20 h-20 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-full blur-xl animate-pulse"></div>
+                    <div class="absolute bottom-8 left-8 w-16 h-16 bg-gradient-to-br from-orange-400/25 to-yellow-500/25 rounded-full blur-lg" style="animation: float 6s ease-in-out infinite;"></div>
+                    
+                    <!-- Shimmer Effect -->
+                    <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1500"></div>
+                    
+                    <div class="relative z-10">
+                        <!-- Epic Title -->
+                        <div class="text-center mb-8">
+                            <h3 class="text-4xl font-black bg-gradient-to-r from-cyan-300 via-blue-300 to-cyan-300 bg-clip-text text-transparent mb-4">
+                                🌟 Digital Druid Chronicles I 🌟
+                            </h3>
+                            <p class="text-xl text-cyan-200 font-semibold mb-2">インスピレーション: デジタル・ドルイドの記録</p>
+                            <div class="w-32 h-1 bg-gradient-to-r from-transparent via-cyan-400 to-transparent mx-auto mb-6"></div>
+                        </div>
+                        
+                        <!-- Epic Video Container -->
+                        <div class="relative mb-8 group/video">
+                            <div class="absolute inset-0 bg-gradient-to-r from-cyan-400/30 via-blue-400/20 to-cyan-400/30 rounded-2xl blur-xl group-hover/video:blur-2xl transition-all duration-500"></div>
+                            <div class="relative video-wrapper bg-gradient-to-br from-slate-900/60 to-indigo-900/60 rounded-2xl p-4 border-2 border-cyan-400/30 hover:border-cyan-300/60 transition-all duration-500">
+                                <iframe 
+                                    class="video-iframe w-full h-80 rounded-xl shadow-[0_0_40px_rgba(0,255,255,0.2)]"
+                                    src="https://www.youtube-nocookie.com/embed/u1-R74XzX8Y?rel=0&modestbranding=1"
+                                    title="Digital Druid Chronicles I"
+                                    frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    allowfullscreen
+                                    loading="lazy">
+                                </iframe>
+                            </div>
+                        </div>
+                        
+                        <!-- Tags and Description -->
+                        <div class="text-center">
+                            <div class="flex justify-center gap-3 mb-6">
+                                <span class="bg-gradient-to-r from-emerald-500/30 to-green-500/30 text-emerald-300 px-4 py-2 rounded-full text-sm font-semibold border border-emerald-400/30">Celtic Electronic</span>
+                                <span class="bg-gradient-to-r from-blue-500/30 to-cyan-500/30 text-cyan-300 px-4 py-2 rounded-full text-sm font-semibold border border-cyan-400/30">Mystical Journey</span>
+                            </div>
+                            <p class="text-lg text-white/90 leading-relaxed max-w-2xl mx-auto">
+                                CelticDreamscapeの音響世界への入り口。古代ケルトの神秘とデジタル技術の融合が織りなす、
+                                <span class="text-cyan-300 font-semibold">新次元のサウンドスケープ</span>へようこそ。
+                            </p>
                         </div>
                     </div>
-                    <div class="p-6">
-                        <h3 class="font-semibold mb-2 text-mistsilver group-hover:text-emerald transition-colors">Emerald Rain over Quiet River</h3>
-                        <p class="text-sm text-mistsilver/60">Celtic ambient soundscape</p>
-                    </div>
                 </div>
-                
-                <div class="group hover-lift bg-deepteal/30 rounded-2xl overflow-hidden cursor-pointer" onclick="openModal('dQw4w9WgXcQ')">
-                    <div class="relative overflow-hidden">
-                        <img src="https://img.youtube.com/vi/dQw4w9WgXcQ/hqdefault.jpg" alt="Whispers of Celtic Legends" 
-                             class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                        <div class="absolute top-4 right-4 bg-black/50 rounded-full p-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            <i data-feather="play" class="w-6 h-6 text-white"></i>
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="font-semibold mb-2 text-mistsilver group-hover:text-emerald transition-colors">Whispers of Celtic Legends Beneath the Ancient Tree</h3>
-                        <p class="text-sm text-mistsilver/60">Mystical forest sounds</p>
-                    </div>
-                </div>
-                
-                <div class="group hover-lift bg-deepteal/30 rounded-2xl overflow-hidden cursor-pointer" onclick="openModal('dQw4w9WgXcQ')">
-                    <div class="relative overflow-hidden">
-                        <img src="https://img.youtube.com/vi/dQw4w9WgXcQ/hqdefault.jpg" alt="Star Symphony on the Clifftop" 
-                             class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                        <div class="absolute top-4 right-4 bg-black/50 rounded-full p-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            <i data-feather="play" class="w-6 h-6 text-white"></i>
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="font-semibold mb-2 text-mistsilver group-hover:text-emerald transition-colors">Star Symphony on the Clifftop</h3>
-                        <p class="text-sm text-mistsilver/60">Celestial Celtic melodies</p>
-                    </div>
-                </div>
-                
-                <div class="group hover-lift bg-deepteal/30 rounded-2xl overflow-hidden cursor-pointer" onclick="openModal('dQw4w9WgXcQ')">
-                    <div class="relative overflow-hidden">
-                        <img src="https://img.youtube.com/vi/dQw4w9WgXcQ/hqdefault.jpg" alt="Moonlit Harp Dream" 
-                             class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                        <div class="absolute top-4 right-4 bg-black/50 rounded-full p-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            <i data-feather="play" class="w-6 h-6 text-white"></i>
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="font-semibold mb-2 text-mistsilver group-hover:text-emerald transition-colors">Moonlit Harp Dream on the Lake</h3>
-                        <p class="text-sm text-mistsilver/60">Peaceful harp compositions</p>
-                    </div>
-                </div>
-            </div>
 
-            <!-- Popular Videos -->
-            <div class="text-center mb-12">
-                <h3 class="font-cinzel text-3xl lg:text-4xl font-bold mb-4 tracking-wide text-mistsilver">Popular Videos</h3>
+                <!-- Mystic Frequencies -->
+                <div class="group relative overflow-hidden bg-gradient-to-br from-emerald-900/40 via-green-800/30 to-emerald-900/40 backdrop-blur-2xl border-2 border-emerald-400/40 rounded-3xl p-8 shadow-[0_0_60px_rgba(0,0,0,0.8)] hover:shadow-[0_0_100px_rgba(34,197,94,0.3)] transition-all duration-700 hover:scale-[1.02]">
+                    <!-- Floating Orbs -->
+                    <div class="absolute top-8 left-8 w-24 h-24 bg-gradient-to-br from-emerald-400/25 to-green-500/25 rounded-full blur-xl animate-pulse"></div>
+                    <div class="absolute bottom-6 right-6 w-18 h-18 bg-gradient-to-br from-blue-400/20 to-cyan-500/20 rounded-full blur-lg animate-ping"></div>
+                    
+                    <!-- Shimmer Effect -->
+                    <div class="absolute inset-0 bg-gradient-to-r from-transparent via-emerald-300/5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1500"></div>
+                    
+                    <div class="relative z-10">
+                        <!-- Epic Title -->
+                        <div class="text-center mb-8">
+                            <h3 class="text-4xl font-black bg-gradient-to-r from-emerald-300 via-green-300 to-emerald-300 bg-clip-text text-transparent mb-4">
+                                🌿 Mystic Frequencies 🌿
+                            </h3>
+                            <p class="text-xl text-emerald-200 font-semibold mb-2">インスピレーション: 神秘の周波数</p>
+                            <div class="w-32 h-1 bg-gradient-to-r from-transparent via-emerald-400 to-transparent mx-auto mb-6"></div>
+                        </div>
+                        
+                        <!-- Epic Video Container -->
+                        <div class="relative mb-8 group/video">
+                            <div class="absolute inset-0 bg-gradient-to-r from-emerald-400/30 via-green-400/20 to-emerald-400/30 rounded-2xl blur-xl group-hover/video:blur-2xl transition-all duration-500"></div>
+                            <div class="relative video-wrapper bg-gradient-to-br from-slate-900/60 to-emerald-900/60 rounded-2xl p-4 border-2 border-emerald-400/30 hover:border-emerald-300/60 transition-all duration-500">
+                                <iframe 
+                                    class="video-iframe w-full h-80 rounded-xl shadow-[0_0_40px_rgba(34,197,94,0.2)]"
+                                    src="https://www.youtube-nocookie.com/embed/OMHSzASXsMg?rel=0&modestbranding=1"
+                                    title="Mystic Frequencies"
+                                    frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    allowfullscreen
+                                    loading="lazy">
+                                </iframe>
+                            </div>
+                        </div>
+                        
+                        <!-- Tags and Description -->
+                        <div class="text-center">
+                            <div class="flex justify-center gap-3 mb-6">
+                                <span class="bg-gradient-to-r from-emerald-500/30 to-green-500/30 text-emerald-300 px-4 py-2 rounded-full text-sm font-semibold border border-emerald-400/30">Ambient Soundscape</span>
+                                <span class="bg-gradient-to-r from-purple-500/30 to-violet-500/30 text-purple-300 px-4 py-2 rounded-full text-sm font-semibold border border-purple-400/30">Mystical Resonance</span>
+                            </div>
+                            <p class="text-lg text-white/90 leading-relaxed max-w-2xl mx-auto">
+                                古代の石碑が響かせる神秘的な周波数を現代のサウンドスケープで再現。
+                                <span class="text-emerald-300 font-semibold">自然の叡智</span>と<span class="text-cyan-300 font-semibold">デジタル技術</span>が紡ぐ究極の癒し体験。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cyber Celtic Ritual -->
+                <div class="group relative overflow-hidden bg-gradient-to-br from-purple-900/40 via-violet-800/30 to-purple-900/40 backdrop-blur-2xl border-2 border-purple-400/40 rounded-3xl p-8 shadow-[0_0_60px_rgba(0,0,0,0.8)] hover:shadow-[0_0_100px_rgba(147,51,234,0.3)] transition-all duration-700 hover:scale-[1.02]">
+                    <!-- Floating Orbs -->
+                    <div class="absolute top-4 right-4 w-22 h-22 bg-gradient-to-br from-purple-400/25 to-violet-500/25 rounded-full blur-xl" style="animation: spin 8s linear infinite;"></div>
+                    <div class="absolute bottom-4 left-4 w-16 h-16 bg-gradient-to-br from-orange-400/30 to-red-500/30 rounded-full blur-lg animate-bounce"></div>
+                    
+                    <!-- Shimmer Effect -->
+                    <div class="absolute inset-0 bg-gradient-to-r from-transparent via-purple-300/5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1500"></div>
+                    
+                    <div class="relative z-10">
+                        <!-- Epic Title -->
+                        <div class="text-center mb-8">
+                            <h3 class="text-4xl font-black bg-gradient-to-r from-purple-300 via-violet-300 to-purple-300 bg-clip-text text-transparent mb-4">
+                                🔮 Cyber Celtic Ritual 🔮
+                            </h3>
+                            <p class="text-xl text-purple-200 font-semibold mb-2">インスピレーション: サイバー・ケルトの儀式</p>
+                            <div class="w-32 h-1 bg-gradient-to-r from-transparent via-purple-400 to-transparent mx-auto mb-6"></div>
+                        </div>
+                        
+                        <!-- Epic Video Container -->
+                        <div class="relative mb-8 group/video">
+                            <div class="absolute inset-0 bg-gradient-to-r from-purple-400/30 via-violet-400/20 to-purple-400/30 rounded-2xl blur-xl group-hover/video:blur-2xl transition-all duration-500"></div>
+                            <div class="relative video-wrapper bg-gradient-to-br from-slate-900/60 to-purple-900/60 rounded-2xl p-4 border-2 border-purple-400/30 hover:border-purple-300/60 transition-all duration-500">
+                                <iframe 
+                                    class="video-iframe w-full h-80 rounded-xl shadow-[0_0_40px_rgba(147,51,234,0.2)]"
+                                    src="https://www.youtube-nocookie.com/embed/HlgwkIseCnE?rel=0&modestbranding=1"
+                                    title="Cyber Celtic Ritual"
+                                    frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    allowfullscreen
+                                    loading="lazy">
+                                </iframe>
+                            </div>
+                        </div>
+                        
+                        <!-- Tags and Description -->
+                        <div class="text-center">
+                            <div class="flex justify-center gap-3 mb-6">
+                                <span class="bg-gradient-to-r from-purple-500/30 to-violet-500/30 text-purple-300 px-4 py-2 rounded-full text-sm font-semibold border border-purple-400/30">Ritual Electronic</span>
+                                <span class="bg-gradient-to-r from-orange-500/30 to-red-500/30 text-orange-300 px-4 py-2 rounded-full text-sm font-semibold border border-orange-400/30">Sacred Technology</span>
+                            </div>
+                            <p class="text-lg text-white/90 leading-relaxed max-w-2xl mx-auto">
+                                デジタル空間で行われるケルト儀式。古代の叡智と未来技術の調和が生み出す、
+                                <span class="text-purple-300 font-semibold">神聖なる電子音響</span>の極致。
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
             
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="group hover-lift bg-deepteal/20 rounded-xl overflow-hidden cursor-pointer" onclick="openModal('dQw4w9WgXcQ')">
-                    <div class="relative">
-                        <img src="https://img.youtube.com/vi/dQw4w9WgXcQ/hqdefault.jpg" alt="Celtic Meadow Joy" 
-                             class="w-full h-40 object-cover group-hover:scale-105 transition-transform duration-300">
-                        <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-300"></div>
-                        <div class="absolute center-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            <i data-feather="play-circle" class="w-12 h-12 text-white"></i>
+            <div class="text-center mt-16">
+                <div class="relative inline-block group/btn">
+                    <!-- Background Glow -->
+                    <div class="absolute inset-0 bg-gradient-to-r from-red-500 via-red-600 to-red-500 rounded-2xl blur-xl opacity-75 group-hover/btn:opacity-100 transition-opacity duration-300"></div>
+                    
+                    <a href="https://youtube.com/@celticdreamscape-i2k" target="_blank" 
+                       class="relative inline-flex items-center gap-4 bg-gradient-to-r from-red-600 via-red-700 to-red-600 hover:from-red-500 hover:via-red-600 hover:to-red-500 text-white px-10 py-5 rounded-2xl font-bold text-xl transition-all duration-300 transform hover:scale-105 border-2 border-red-500/50 hover:border-red-400 shadow-[0_0_30px_rgba(239,68,68,0.3)] hover:shadow-[0_0_50px_rgba(239,68,68,0.5)]">
+                        <!-- YouTube Icon -->
+                        <div class="flex items-center justify-center w-8 h-8 bg-white/20 rounded-full">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136C4.495 20.455 12 20.455 12 20.455s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                            </svg>
                         </div>
-                    </div>
-                    <div class="p-4">
-                        <h4 class="font-medium text-mistsilver group-hover:text-emerald transition-colors">Celtic Meadow Joy – A Girl's Playful…</h4>
-                    </div>
-                </div>
-                
-                <div class="group hover-lift bg-deepteal/20 rounded-xl overflow-hidden cursor-pointer" onclick="openModal('dQw4w9WgXcQ')">
-                    <div class="relative">
-                        <img src="https://img.youtube.com/vi/dQw4w9WgXcQ/hqdefault.jpg" alt="Celtic Meadow" 
-                             class="w-full h-40 object-cover group-hover:scale-105 transition-transform duration-300">
-                        <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-300"></div>
-                        <div class="absolute center-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            <i data-feather="play-circle" class="w-12 h-12 text-white"></i>
-                        </div>
-                    </div>
-                    <div class="p-4">
-                        <h4 class="font-medium text-mistsilver group-hover:text-emerald transition-colors">Celtic Meadow…</h4>
-                    </div>
-                </div>
-                
-                <div class="group hover-lift bg-deepteal/20 rounded-xl overflow-hidden cursor-pointer" onclick="openModal('dQw4w9WgXcQ')">
-                    <div class="relative">
-                        <img src="https://img.youtube.com/vi/dQw4w9WgXcQ/hqdefault.jpg" alt="Sounds of Dawn" 
-                             class="w-full h-40 object-cover group-hover:scale-105 transition-transform duration-300">
-                        <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-300"></div>
-                        <div class="absolute center-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            <i data-feather="play-circle" class="w-12 h-12 text-white"></i>
-                        </div>
-                    </div>
-                    <div class="p-4">
-                        <h4 class="font-medium text-mistsilver group-hover:text-emerald transition-colors">Sounds of Dawn – A Celtic Journey…</h4>
-                    </div>
-                </div>
-                
-                <div class="group hover-lift bg-deepteal/20 rounded-xl overflow-hidden cursor-pointer" onclick="openModal('dQw4w9WgXcQ')">
-                    <div class="relative">
-                        <img src="https://img.youtube.com/vi/dQw4w9WgXcQ/hqdefault.jpg" alt="Whispers of Starlit Valleys" 
-                             class="w-full h-40 object-cover group-hover:scale-105 transition-transform duration-300">
-                        <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-300"></div>
-                        <div class="absolute center-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            <i data-feather="play-circle" class="w-12 h-12 text-white"></i>
-                        </div>
-                    </div>
-                    <div class="p-4">
-                        <h4 class="font-medium text-mistsilver group-hover:text-emerald transition-colors">Whispers of Starlit Valleys…</h4>
-                    </div>
-                </div>
-                
-                <div class="group hover-lift bg-deepteal/20 rounded-xl overflow-hidden cursor-pointer" onclick="openModal('dQw4w9WgXcQ')">
-                    <div class="relative">
-                        <img src="https://img.youtube.com/vi/dQw4w9WgXcQ/hqdefault.jpg" alt="Sunlit Celtic Gathering" 
-                             class="w-full h-40 object-cover group-hover:scale-105 transition-transform duration-300">
-                        <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-300"></div>
-                        <div class="absolute center-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            <i data-feather="play-circle" class="w-12 h-12 text-white"></i>
-                        </div>
-                    </div>
-                    <div class="p-4">
-                        <h4 class="font-medium text-mistsilver group-hover:text-emerald transition-colors">Sunlit Celtic Gathering…</h4>
-                    </div>
-                </div>
-                
-                <div class="group hover-lift bg-deepteal/20 rounded-xl overflow-hidden cursor-pointer" onclick="openModal('dQw4w9WgXcQ')">
-                    <div class="relative">
-                        <img src="https://img.youtube.com/vi/dQw4w9WgXcQ/hqdefault.jpg" alt="Whispering Harp" 
-                             class="w-full h-40 object-cover group-hover:scale-105 transition-transform duration-300">
-                        <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-300"></div>
-                        <div class="absolute center-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            <i data-feather="play-circle" class="w-12 h-12 text-white"></i>
-                        </div>
-                    </div>
-                    <div class="p-4">
-                        <h4 class="font-medium text-mistsilver group-hover:text-emerald transition-colors">Whispering Harp – Woodland…</h4>
-                    </div>
+                        
+                        <!-- Text -->
+                        <span class="flex items-center gap-2">
+                            🎬 CelticDreamscape YouTube Channel 
+                            <span class="text-2xl animate-bounce">▶️</span>
+                        </span>
+                        
+                        <!-- Shimmer Effect -->
+                        <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover/btn:translate-x-full transition-transform duration-700 rounded-2xl"></div>
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Newsletter / Follow Section -->
-    <section id="contact" class="py-20 bg-gradient-to-b from-deepteal/30 to-midnight">
-        <div class="container mx-auto px-6 text-center">
-            <div class="max-w-4xl mx-auto">
-                <h2 class="font-cinzel text-4xl lg:text-5xl font-bold mb-6 tracking-wide text-mistsilver">Stay Connected</h2>
-                <p class="text-lg lg:text-xl mb-12 text-mistsilver/80 max-w-2xl mx-auto leading-relaxed">
-                    Join our community of Celtic music lovers and never miss a new soundscape. Be the first to experience our latest mystical compositions.
-                </p>
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 px-6" style="background: rgba(26, 26, 46, 0.85);">
+        <div class="container mx-auto max-w-4xl text-center">
+            <h2 class="text-4xl font-bold mb-16 glitch fade-in-on-scroll">
+                <span class="neon-glow">Connect</span> <span class="cyber-glow">the</span> <span class="neon-glow">Realms</span>
+            </h2>
+            
+            <div class="cyber-glass p-8 rounded-lg">
                 
-                <div class="max-w-md mx-auto mb-12">
-                    <form class="flex rounded-full overflow-hidden shadow-2xl">
-                        <input type="email" placeholder="Enter your email address" 
-                               class="flex-1 px-6 py-4 bg-white/10 backdrop-blur-sm text-mistsilver placeholder-mistsilver/50 border-0 focus:outline-none focus:ring-2 focus:ring-emerald/50">
-                        <button type="submit" 
-                                class="px-8 py-4 bg-emerald hover:bg-warmgold text-white font-medium transition-all duration-300 hover:shadow-lg">
-                            Subscribe
-                        </button>
-                    </form>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto mb-12">
+                    <!-- Epic Spotify Button -->
+                    <div class="group relative">
+                        <!-- Outer Glow -->
+                        <div class="absolute inset-0 bg-gradient-to-r from-green-400 via-emerald-500 to-green-400 rounded-2xl blur-xl opacity-50 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        
+                        <a href="https://open.spotify.com/intl-ja/artist/2cOfO1ZIeVB9tCkESSuCrK?si=mYevXqqMQmmlWSVbwW8QdA" target="_blank" 
+                           class="relative block overflow-hidden bg-gradient-to-br from-green-500 via-emerald-600 to-green-700 hover:from-green-400 hover:via-emerald-500 hover:to-green-600 text-white font-bold text-lg rounded-2xl transition-all duration-500 transform hover:scale-110 border-2 border-green-400/50 hover:border-green-300 shadow-[0_0_30px_rgba(34,197,94,0.3)] hover:shadow-[0_0_60px_rgba(34,197,94,0.6)]">
+                            
+                            <!-- Content -->
+                            <div class="relative z-10 px-8 py-5 flex items-center gap-3">
+                                <!-- Icon Container -->
+                                <div class="flex items-center justify-center w-10 h-10 bg-white/20 rounded-full backdrop-blur-sm">
+                                    <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.48.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.32 11.28-1.02 15.721 1.621.539.3.719 1.02.42 1.56-.299.421-1.02.599-1.559.3z"/>
+                                    </svg>
+                                </div>
+                                
+                                <!-- Text -->
+                                <div class="flex flex-col">
+                                    <span class="text-lg font-black">Spotify</span>
+                                    <span class="text-sm text-green-100 opacity-90">Stream Now</span>
+                                </div>
+                                
+                                <!-- Animated Arrow -->
+                                <div class="ml-2 transform group-hover:translate-x-2 transition-transform duration-300">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                            
+                            <!-- Multi-layer Shimmer -->
+                            <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
+                            <div class="absolute inset-0 bg-gradient-to-r from-transparent via-emerald-300/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700" style="animation-delay: 0.2s;"></div>
+                        </a>
+                    </div>
+
+                    <!-- Epic Apple Music Button -->
+                    <div class="group relative">
+                        <!-- Outer Glow -->
+                        <div class="absolute inset-0 bg-gradient-to-r from-slate-600 via-gray-700 to-slate-600 rounded-2xl blur-xl opacity-50 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        
+                        <a href="https://music.apple.com/jp/artist/celticdreamscape/1819400388" target="_blank" 
+                           class="relative block overflow-hidden bg-gradient-to-br from-slate-700 via-gray-800 to-slate-900 hover:from-slate-600 hover:via-gray-700 hover:to-slate-800 text-white font-bold text-lg rounded-2xl transition-all duration-500 transform hover:scale-110 border-2 border-gray-500/50 hover:border-gray-400 shadow-[0_0_30px_rgba(100,116,139,0.3)] hover:shadow-[0_0_60px_rgba(100,116,139,0.6)]">
+                            
+                            <!-- Content -->
+                            <div class="relative z-10 px-8 py-5 flex items-center gap-3">
+                                <!-- Icon Container -->
+                                <div class="flex items-center justify-center w-10 h-10 bg-white/20 rounded-full backdrop-blur-sm">
+                                    <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+                                    </svg>
+                                </div>
+                                
+                                <!-- Text -->
+                                <div class="flex flex-col">
+                                    <span class="text-lg font-black">Apple Music</span>
+                                    <span class="text-sm text-gray-200 opacity-90">Listen Now</span>
+                                </div>
+                                
+                                <!-- Animated Arrow -->
+                                <div class="ml-2 transform group-hover:translate-x-2 transition-transform duration-300">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                            
+                            <!-- Multi-layer Shimmer -->
+                            <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
+                            <div class="absolute inset-0 bg-gradient-to-r from-transparent via-gray-300/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700" style="animation-delay: 0.2s;"></div>
+                        </a>
+                    </div>
+
+                    <!-- Epic SUNO Button -->
+                    <div class="group relative">
+                        <!-- Outer Glow -->
+                        <div class="absolute inset-0 bg-gradient-to-r from-purple-500 via-violet-600 to-purple-500 rounded-2xl blur-xl opacity-50 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        
+                        <a href="https://suno.com/@celticdrea83998" target="_blank" 
+                           class="relative block overflow-hidden bg-gradient-to-br from-purple-600 via-violet-700 to-purple-800 hover:from-purple-500 hover:via-violet-600 hover:to-purple-700 text-white font-bold text-lg rounded-2xl transition-all duration-500 transform hover:scale-110 border-2 border-purple-400/50 hover:border-purple-300 shadow-[0_0_30px_rgba(147,51,234,0.3)] hover:shadow-[0_0_60px_rgba(147,51,234,0.6)]">
+                            
+                            <!-- Content -->
+                            <div class="relative z-10 px-8 py-5 flex items-center gap-3">
+                                <!-- Icon Container -->
+                                <div class="flex items-center justify-center w-10 h-10 bg-white/20 rounded-full backdrop-blur-sm">
+                                    <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                                    </svg>
+                                </div>
+                                
+                                <!-- Text -->
+                                <div class="flex flex-col">
+                                    <span class="text-lg font-black">SUNO</span>
+                                    <span class="text-sm text-purple-100 opacity-90">Create & Listen</span>
+                                </div>
+                                
+                                <!-- Animated Arrow -->
+                                <div class="ml-2 transform group-hover:translate-x-2 transition-transform duration-300">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                            
+                            <!-- Multi-layer Shimmer -->
+                            <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
+                            <div class="absolute inset-0 bg-gradient-to-r from-transparent via-purple-300/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700" style="animation-delay: 0.2s;"></div>
+                        </a>
+                    </div>
                 </div>
                 
-                <div class="flex flex-wrap justify-center gap-4">
-                    <a href="https://youtube.com/@celticdreamscape-i2k?sub_confirmation=1" target="_blank" rel="noopener" 
-                       class="flex items-center px-6 py-3 bg-emerald hover:bg-emerald/80 text-white rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg">
-                        <i data-feather="youtube" class="w-5 h-5 mr-2"></i>
-                        Subscribe
-                    </a>
-                    <a href="https://x.com/CelticDrea83998" target="_blank" rel="noopener" 
-                       class="flex items-center px-6 py-3 bg-white/10 hover:bg-warmgold/20 text-mistsilver rounded-full transition-all duration-300 hover:scale-105 backdrop-blur-sm">
-                        <i data-feather="twitter" class="w-5 h-5 mr-2"></i>
-                        Follow
-                    </a>
-                    <a href="https://ko-fi.com/celticdreamscape" target="_blank" rel="noopener" 
-                       class="flex items-center px-6 py-3 bg-white/10 hover:bg-warmgold/20 text-mistsilver rounded-full transition-all duration-300 hover:scale-105 backdrop-blur-sm">
-                        <i data-feather="coffee" class="w-5 h-5 mr-2"></i>
-                        Support
-                    </a>
+                <div class="mb-4">
+                    <iframe 
+                        style="border-radius:12px" 
+                        src="https://open.spotify.com/embed/track/4pQYNkklgjLmMirQRNQq9v?utm_source=generator" 
+                        width="100%" 
+                        height="152" 
+                        frameBorder="0" 
+                        allowfullscreen="" 
+                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                        loading="lazy">
+                    </iframe>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-midnight/90 backdrop-blur-sm py-12">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-8">
-                <img src="/assets/avatar-harp-maiden.png" alt="CelticDreamscape Logo" 
-                     class="w-16 h-16 rounded-full mx-auto mb-4 ring-2 ring-emerald/30">
-                <h3 class="font-cinzel text-xl font-bold text-mistsilver mb-2">CelticDreamscape</h3>
-                <p class="text-mistsilver/60">Step into a world of Celtic magic</p>
-            </div>
-            
-            <div class="border-t border-mistsilver/10 pt-8">
-                <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-                    <p class="text-mistsilver/60 text-sm">© 2025 CelticDreamscape. All rights reserved.</p>
-                    <div class="flex space-x-6 text-sm">
-                        <a href="#" class="text-mistsilver/60 hover:text-emerald transition-colors">Privacy Policy</a>
-                        <a href="#" class="text-mistsilver/60 hover:text-emerald transition-colors">Terms of Service</a>
-                        <a href="#" class="text-mistsilver/60 hover:text-emerald transition-colors">Contact</a>
-                    </div>
-                </div>
-            </div>
+    <footer class="py-8 px-6 border-t border-deep-emerald/30">
+        <div class="container mx-auto text-center">
+            <p class="text-mistsilver/60 mb-4">
+                © 2025 CelticDreamscape. All rights reserved.
+            </p>
         </div>
     </footer>
+    </div> <!-- /#main-content -->
 
-    <!-- Video Modal -->
-    <div id="video-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/90 backdrop-blur-sm p-4">
-        <div class="relative w-full max-w-4xl aspect-video bg-black rounded-2xl overflow-hidden shadow-2xl">
-            <button id="close-modal" class="absolute top-4 right-4 z-10 p-3 bg-black/50 hover:bg-black/70 rounded-full transition-colors backdrop-blur-sm" 
-                    aria-label="Close modal">
-                <i data-feather="x" class="w-6 h-6 text-white"></i>
-            </button>
-            <iframe id="video-iframe" src="" class="w-full h-full" frameborder="0" allowfullscreen></iframe>
-        </div>
-    </div>
-
+    <!-- Scripts - Optimized loading -->
+    <script src="https://unpkg.com/wavesurfer.js@6" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
+    <script src="simple-particles.js" defer></script>
+    <script src="hero-bg.js" defer></script>
+    <script src="youtube-integration.js" defer></script>
+    <script src="music-platforms.js" defer></script>
+    <script src="audio-debug.js" defer></script>
+    <script src="main.js" defer></script>
+    
     <script>
-        // Initialize Feather Icons
-        feather.replace();
-
-        // Dark mode functionality
-        const darkToggle = document.getElementById('dark-toggle');
-        const html = document.documentElement;
-        
-        if (localStorage.getItem('darkMode') === 'true') {
-            html.classList.add('dark');
-        }
-        
-        darkToggle.addEventListener('click', () => {
-            html.classList.toggle('dark');
-            localStorage.setItem('darkMode', html.classList.contains('dark'));
-        });
-
-        // Modal functionality
-        function openModal(videoId) {
-            const modal = document.getElementById('video-modal');
-            const iframe = document.getElementById('video-iframe');
-            iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
-            modal.classList.remove('hidden');
-            modal.classList.add('flex');
-        }
-
-        document.getElementById('close-modal').addEventListener('click', () => {
-            const modal = document.getElementById('video-modal');
-            const iframe = document.getElementById('video-iframe');
-            modal.classList.add('hidden');
-            modal.classList.remove('flex');
-            iframe.src = '';
-        });
-
-        // Close modal on background click
-        document.getElementById('video-modal').addEventListener('click', (e) => {
-            if (e.target.id === 'video-modal') {
-                const modal = document.getElementById('video-modal');
-                const iframe = document.getElementById('video-iframe');
-                modal.classList.add('hidden');
-                modal.classList.remove('flex');
-                iframe.src = '';
-            }
-        });
-
-        // Smooth scrolling
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        // 確実な背景初期化
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log('🎨 Initializing enhanced background...');
+            
+            // 確実にローカルケルト風景背景を設定
+            const sections = [
+                {
+                    id: 'home',
+                    image: './mountain.png',
+                    name: 'ローカル山景'
+                },
+                {
+                    id: 'about', 
+                    image: './forest.png',
+                    name: 'ローカル森林'
+                },
+                {
+                    id: 'portfolio',
+                    image: './lake.png', 
+                    name: 'ローカル湖景'
+                },
+                {
+                    id: 'contact',
+                    image: './mountain.png',
+                    name: 'ローカル山景'
+                }
+            ];
+            
+            sections.forEach(section => {
+                const element = document.getElementById(section.id);
+                if (element) {
+                    element.style.backgroundImage = `
+                        radial-gradient(ellipse at 50% 30%, rgba(255, 215, 0, 0.15), transparent 70%),
+                        radial-gradient(ellipse at 20% 80%, rgba(138, 43, 226, 0.1), transparent 60%),
+                        url('${section.image}'),
+                        linear-gradient(180deg, rgba(15, 25, 45, 0.8), rgba(22, 78, 74, 0.6))
+                    `;
+                    element.style.backgroundSize = 'cover';
+                    element.style.backgroundPosition = 'center';
+                    element.style.backgroundAttachment = 'fixed';
+                    element.style.backgroundRepeat = 'no-repeat';
+                    
+                    console.log(`🏔️ ${section.name} background applied to ${section.id}`);
                 }
             });
+            
+            // Three.js確認とフォールバック
+            setTimeout(() => {
+                if (!window.THREE) {
+                    console.warn('🚨 Three.js not loaded, applying enhanced CSS background');
+                    // 追加のパーティクル作成
+                    createCSSParticles();
+                }
+            }, 500);
         });
-
-        // Newsletter form
-        document.querySelector('form').addEventListener('submit', (e) => {
-            e.preventDefault();
-            alert('Thank you for subscribing! Welcome to the CelticDreamscape community.');
+        
+        function createCSSParticles() {
+            const particleContainer = document.createElement('div');
+            particleContainer.style.cssText = `
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: -8;
+                pointer-events: none;
+                overflow: hidden;
+            `;
+            
+            // 20個の光る粒子を作成
+            for (let i = 0; i < 20; i++) {
+                const particle = document.createElement('div');
+                const colors = ['#FFD700', '#00BFFF', '#32CD32', '#8A2BE2'];
+                const color = colors[i % colors.length];
+                
+                particle.style.cssText = `
+                    position: absolute;
+                    width: ${Math.random() * 4 + 2}px;
+                    height: ${Math.random() * 4 + 2}px;
+                    background: radial-gradient(circle, ${color}, transparent);
+                    border-radius: 50%;
+                    left: ${Math.random() * 100}%;
+                    top: ${Math.random() * 100}%;
+                    animation: floatParticle ${Math.random() * 4 + 3}s ease-in-out infinite;
+                    animation-delay: ${Math.random() * 2}s;
+                    box-shadow: 0 0 ${Math.random() * 10 + 5}px ${color};
+                `;
+                
+                particleContainer.appendChild(particle);
+            }
+            
+            document.body.appendChild(particleContainer);
+            
+            // アニメーションスタイル追加
+            if (!document.getElementById('particle-css')) {
+                const style = document.createElement('style');
+                style.id = 'particle-css';
+                style.textContent = `
+                    @keyframes floatParticle {
+                        0%, 100% { transform: translateY(0px) translateX(0px) scale(1); opacity: 0.7; }
+                        25% { transform: translateY(-30px) translateX(20px) scale(1.2); opacity: 1; }
+                        50% { transform: translateY(-15px) translateX(-30px) scale(0.8); opacity: 0.8; }
+                        75% { transform: translateY(-40px) translateX(15px) scale(1.1); opacity: 0.9; }
+                    }
+                `;
+                document.head.appendChild(style);
+            }
+            
+            console.log('✨ CSS particles created');
+        }
+        
+        // Initialize default YouTube players when DOM is ready
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log('🎬 Initializing default YouTube players...');
+            
+            // Wait for music platforms to be ready
+            setTimeout(() => {
+                const trackCards = document.querySelectorAll('.track-card');
+                
+                trackCards.forEach(card => {
+                    const activeIcon = card.querySelector('.platform-icon.active');
+                    if (activeIcon && activeIcon.dataset.platform === 'youtube') {
+                        const playerContainer = card.querySelector('.player-container');
+                        const videoId = activeIcon.dataset.trackId;
+                        
+                        if (playerContainer && videoId) {
+                            // Create YouTube embed
+                            const iframe = document.createElement('iframe');
+                            iframe.width = '100%';
+                            iframe.height = '100%';
+                            iframe.src = `https://www.youtube.com/embed/${videoId}?enablejsapi=1&rel=0&modestbranding=1`;
+                            iframe.frameBorder = '0';
+                            iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+                            iframe.allowFullscreen = true;
+                            iframe.loading = 'lazy';
+                            iframe.style.borderRadius = '8px';
+                            
+                            playerContainer.innerHTML = '';
+                            playerContainer.appendChild(iframe);
+                            
+                            console.log(`🎵 Loaded YouTube video: ${videoId}`);
+                        }
+                    }
+                });
+            }, 1000);
         });
+    </script>
+    
+    <!-- YouTube Video Debug and Loading -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        console.log('🎬 Checking YouTube video elements...');
+        
+        // 動画ラッパーの確認
+        const videoWrappers = document.querySelectorAll('.video-wrapper');
+        console.log(`Found ${videoWrappers.length} video wrappers`);
+        
+        videoWrappers.forEach((wrapper, index) => {
+            const iframe = wrapper.querySelector('.video-iframe');
+            if (iframe) {
+                const src = iframe.getAttribute('src');
+                console.log(`Video ${index + 1}: ${src}`);
+                
+                // 動画ラッパーにデバッグ情報を追加
+                const debugInfo = document.createElement('div');
+                debugInfo.style.cssText = `
+                    position: absolute;
+                    top: 10px;
+                    left: 10px;
+                    background: rgba(255, 0, 0, 0.8);
+                    color: white;
+                    padding: 5px 10px;
+                    border-radius: 4px;
+                    font-size: 12px;
+                    font-weight: bold;
+                    z-index: 99999;
+                    pointer-events: none;
+                `;
+                debugInfo.textContent = `Video ${index + 1}: ${iframe.src ? 'SRC OK' : 'NO SRC'}`;
+                wrapper.appendChild(debugInfo);
+                
+                // iframeの読み込み状況を監視
+                iframe.onload = function() {
+                    console.log(`✅ Video ${index + 1} iframe loaded`);
+                    debugInfo.style.background = 'rgba(0, 255, 0, 0.8)';
+                    debugInfo.textContent = `Video ${index + 1}: LOADED`;
+                };
+                
+                iframe.onerror = function() {
+                    console.log(`❌ Video ${index + 1} iframe error`);
+                    debugInfo.style.background = 'rgba(255, 0, 0, 0.8)';
+                    debugInfo.textContent = `Video ${index + 1}: ERROR`;
+                };
+            } else {
+                console.log(`❌ No iframe found in wrapper ${index + 1}`);
+            }
+        });
+        
+        // YouTubeリンクの動作を確認
+        document.querySelectorAll('.platform-icon.youtube').forEach(link => {
+            link.addEventListener('click', function(e) {
+                console.log('🎵 YouTube link clicked:', this.href);
+            });
+        });
+    });
     </script>
 </body>
 </html>
