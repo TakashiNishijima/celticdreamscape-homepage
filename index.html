@@ -714,14 +714,20 @@
             min-height: 100vh;
         }
         
-        /* 自然な動画フェードイン */
+        /* 即座に動画表示開始 */
         #background-video {
             opacity: 0.3;
             transition: opacity 2s ease-in-out;
+            animation: videoAutoFadeIn 2s ease-in-out forwards;
         }
         
-        #background-video.loaded {
-            opacity: 1;
+        @keyframes videoAutoFadeIn {
+            0% {
+                opacity: 0.3;
+            }
+            100% {
+                opacity: 1;
+            }
         }
         
         /* コンテンツの自然な表示 */
@@ -1766,19 +1772,9 @@
     <script src="main.js" defer></script>
     
     <script>
-        // 自然な読み込み体験
+        // シンプルな読み込み確認
         document.addEventListener('DOMContentLoaded', () => {
-            const video = document.getElementById('background-video');
-            
-            // 動画を即座に表示開始（薄く）
-            setTimeout(() => {
-                video.classList.add('loaded');
-            }, 500);
-            
-            // 動画読み込み完了時の処理
-            video.addEventListener('loadeddata', () => {
-                console.log('✨ Background video loaded naturally');
-            });
+            console.log('✨ Celtic Dreamscape loaded naturally');
         });
         
         // 確実な背景初期化
