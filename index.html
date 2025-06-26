@@ -548,40 +548,6 @@
             transform: translateY(0);
         }
         
-        /* スムーズなローディング効果 */
-        .loading-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
-            z-index: 9999;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            opacity: 1;
-            transition: opacity 0.8s ease-out;
-        }
-        
-        .loading-overlay.hidden {
-            opacity: 0;
-            pointer-events: none;
-        }
-        
-        .loading-spinner {
-            width: 50px;
-            height: 50px;
-            border: 3px solid rgba(0, 255, 255, 0.3);
-            border-top: 3px solid #00ffff;
-            border-radius: 50%;
-            animation: spin 1s linear infinite;
-        }
-        
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
         
         /* Platform icons styling */
         .platform-icons {
@@ -742,33 +708,34 @@
         }
         
         
-        /* 動画背景のみ - 画像削除 */
+        /* 動画背景のみ - 自然な表示 */
         body {
             background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
             min-height: 100vh;
         }
         
-        /* 読み込み中のスムーズ表示 */
+        /* 自然な動画フェードイン */
         #background-video {
-            opacity: 0;
-            transition: opacity 1.5s ease-in-out;
+            opacity: 0.3;
+            transition: opacity 2s ease-in-out;
         }
         
         #background-video.loaded {
             opacity: 1;
         }
         
-        /* ページ読み込み時のフェードイン */
+        /* コンテンツの自然な表示 */
         .hero-content {
             opacity: 0;
-            transform: translateY(30px);
-            animation: heroFadeIn 2s ease-out 0.5s forwards;
+            animation: naturalFadeIn 3s ease-out 0.3s forwards;
         }
         
-        @keyframes heroFadeIn {
-            to {
+        @keyframes naturalFadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
                 opacity: 1;
-                transform: translateY(0);
             }
         }
         
@@ -1063,22 +1030,18 @@
         
     </style>
 </head>
-    <!-- ローディングオーバーレイ -->
-    <div id="loading-overlay" class="loading-overlay">
-        <div class="text-center">
-            <div class="loading-spinner mx-auto mb-4"></div>
-            <div class="text-xl font-bold neon-glow">Celtic Dreamscape</div>
-            <div class="text-sm text-gray-400 mt-2">Loading mystical experience...</div>
-        </div>
-    </div>
-
 <body class="text-mistsilver font-sans overflow-x-hidden">
     <!-- メインコンテンツラッパー -->
     <div id="main-content">
         <!-- Dynamic Forest Background Canvas -->
         
     <!-- Header -->
-    <header class="fixed top-0 w-full z-50 cyber-glass">
+    <header class="fixed top-0 w-full z-50 cyber-glass" style="opacity: 0; animation: headerFadeIn 2s ease-out 1s forwards;">
+        <style>
+            @keyframes headerFadeIn {
+                to { opacity: 1; }
+            }
+        </style>
         <nav class="container mx-auto px-6 py-4">
             <div class="flex items-center justify-between">
                 <div class="text-2xl font-bold">
@@ -1117,7 +1080,7 @@
             muted 
             loop 
             playsinline
-            preload="auto"
+            preload="metadata"
             class="absolute top-0 left-0 w-full h-full object-cover z-0"
             style="filter: brightness(0.75) contrast(1.2) saturate(1.1);"
         >
@@ -1803,29 +1766,19 @@
     <script src="main.js" defer></script>
     
     <script>
-        // スムーズな読み込み体験
-        window.addEventListener('load', () => {
-            // 動画読み込み完了を確認
+        // 自然な読み込み体験
+        document.addEventListener('DOMContentLoaded', () => {
             const video = document.getElementById('background-video');
-            const loadingOverlay = document.getElementById('loading-overlay');
             
-            const hideLoading = () => {
-                setTimeout(() => {
-                    loadingOverlay.classList.add('hidden');
-                    // 動画のフェードイン
-                    video.classList.add('loaded');
-                }, 800);
-            };
+            // 動画を即座に表示開始（薄く）
+            setTimeout(() => {
+                video.classList.add('loaded');
+            }, 500);
             
-            if (video.readyState >= 3) {
-                // 動画が既に読み込まれている場合
-                hideLoading();
-            } else {
-                // 動画読み込み完了を待つ
-                video.addEventListener('canplay', hideLoading);
-                // フォールバック（5秒後に強制表示）
-                setTimeout(hideLoading, 5000);
-            }
+            // 動画読み込み完了時の処理
+            video.addEventListener('loadeddata', () => {
+                console.log('✨ Background video loaded naturally');
+            });
         });
         
         // 確実な背景初期化
