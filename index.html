@@ -1079,9 +1079,11 @@
             loop 
             playsinline
             preload="auto"
+            controls="false"
             class="absolute top-0 left-0 w-full h-full object-cover"
-            style="z-index: 1; filter: brightness(0.75) contrast(1.2) saturate(1.1);"
+            style="z-index: 1; filter: brightness(0.75) contrast(1.2) saturate(1.1); position: absolute !important; top: 0 !important; left: 0 !important; width: 100% !important; height: 100% !important;"
         >
+            <source src="./background-video3.mp4" type="video/mp4">
             <source src="background-video3.mp4" type="video/mp4">
         </video>
         
@@ -1764,9 +1766,35 @@
     <script src="main.js" defer></script>
     
     <script>
-        // シンプルな読み込み確認
+        // 動画の確実な再生
         document.addEventListener('DOMContentLoaded', () => {
             console.log('✨ Celtic Dreamscape loaded naturally');
+            
+            const video = document.getElementById('background-video');
+            if (video) {
+                // 動画の再生を確実にする
+                video.muted = true;
+                video.autoplay = true;
+                video.loop = true;
+                
+                // 再生を強制実行
+                const playPromise = video.play();
+                if (playPromise !== undefined) {
+                    playPromise.then(() => {
+                        console.log('🎬 Background video started playing');
+                        video.style.opacity = '1';
+                    }).catch(error => {
+                        console.warn('Video autoplay failed:', error);
+                        // フォールバック: ユーザー操作後に再生
+                        document.addEventListener('click', () => {
+                            video.play().then(() => {
+                                console.log('🎬 Background video started after user interaction');
+                                video.style.opacity = '1';
+                            });
+                        }, { once: true });
+                    });
+                }
+            }
         });
         
         // 確実な背景初期化
