@@ -707,44 +707,13 @@
         }
         
         
-        /* ケルト自然風景背景 - 最適化 */
+        /* 動画背景のみ - 画像削除 */
         body {
-            background: 
-                /* 高コントラスト神秘オーバーレイ */
-                radial-gradient(ellipse 800px 400px at 25% 15%, rgba(255, 215, 0, 0.25), transparent 70%),
-                radial-gradient(ellipse 600px 300px at 75% 85%, rgba(138, 43, 226, 0.2), transparent 60%),
-                radial-gradient(ellipse 1000px 500px at 50% 50%, rgba(0, 191, 255, 0.08), transparent 80%),
-                /* メイン森林背景 */
-                url('./forest.png') center bottom/cover,
-                /* 深いダークベース */
-                linear-gradient(180deg, 
-                    rgba(10, 15, 25, 0.95) 0%,
-                    rgba(15, 35, 35, 0.8) 40%,
-                    rgba(5, 25, 15, 0.9) 80%,
-                    rgba(10, 15, 25, 0.98) 100%);
-            background-attachment: fixed, fixed, fixed, fixed, fixed;
-            background-blend-mode: screen, multiply, soft-light, overlay, normal;
+            background: transparent;
             min-height: 100vh;
         }
         
         
-        /* 戦略的湖景レイヤー */
-        body::before {
-            content: '';
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 120%;
-            height: 120%;
-            background: 
-                /* 大スケール湖景 */
-                url('./lake.png') 30% 40% / 130% auto no-repeat;
-            opacity: 0.5;
-            z-index: -9;
-            pointer-events: none;
-            mix-blend-mode: luminosity;
-            animation: subtleFloat 60s ease-in-out infinite;
-        }
         
         /* 背景ベースレイヤー */
         body {
