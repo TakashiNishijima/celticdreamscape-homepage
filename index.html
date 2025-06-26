@@ -716,18 +716,8 @@
         
         /* 即座に動画表示開始 */
         #background-video {
-            opacity: 0.3;
-            transition: opacity 2s ease-in-out;
-            animation: videoAutoFadeIn 2s ease-in-out forwards;
-        }
-        
-        @keyframes videoAutoFadeIn {
-            0% {
-                opacity: 0.3;
-            }
-            100% {
-                opacity: 1;
-            }
+            opacity: 1;
+            animation: none;
         }
         
         /* コンテンツの自然な表示 */
@@ -1086,7 +1076,7 @@
             muted 
             loop 
             playsinline
-            preload="metadata"
+            preload="auto"
             class="absolute top-0 left-0 w-full h-full object-cover z-0"
             style="filter: brightness(0.75) contrast(1.2) saturate(1.1);"
         >
