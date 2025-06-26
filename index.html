@@ -716,7 +716,9 @@
         
         /* 即座に動画表示開始 */
         #background-video {
-            opacity: 1;
+            opacity: 1 !important;
+            z-index: 1 !important;
+            display: block !important;
             animation: none;
         }
         
@@ -1077,14 +1079,14 @@
             loop 
             playsinline
             preload="auto"
-            class="absolute top-0 left-0 w-full h-full object-cover z-0"
-            style="filter: brightness(0.75) contrast(1.2) saturate(1.1);"
+            class="absolute top-0 left-0 w-full h-full object-cover"
+            style="z-index: 1; filter: brightness(0.75) contrast(1.2) saturate(1.1);"
         >
             <source src="background-video3.mp4" type="video/mp4">
         </video>
         
         <!-- 動画オーバーレイ -->
-        <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-black/30 via-transparent to-black/50 z-1"></div>
+        <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-black/30 via-transparent to-black/50" style="z-index: 2;"></div>
         
         <!-- 動く光の粒子 -->
         <div class="floating-particles"></div>
