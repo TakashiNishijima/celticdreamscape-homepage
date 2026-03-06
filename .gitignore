@@ -1,0 +1,35 @@
+# macOS
+.DS_Store
+.DS_Store?
+._*
+
+# Logs
+*.log
+
+# Credentials & Config
+config.json
+jwt-auth-config.json
+*.env
+.env.*
+
+# WordPress deploy tools
+*.php
+deploy-*.py
+create-page.py
+upload-media.py
+
+# SSL/Server guides
+ssl-setup-guide.md
+wordpress-setup-guide.md
+wordpress-version.html
+
+# Debug
+audio-debug.js
+
+# Backups
+Back UP/
+BOTU/
+
+# IDE
+.vscode/
+.idea/
