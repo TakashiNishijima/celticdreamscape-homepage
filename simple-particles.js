@@ -4,16 +4,16 @@ class SimpleParticleSystem {
         this.particleCount = 15;
         this.particles = [];
         this.container = null;
-        
+
         this.init();
     }
-    
+
     init() {
         this.createContainer();
         this.createParticles();
         console.log('✨ Simple particle system initialized');
     }
-    
+
     createContainer() {
         // Find existing container or create new one
         this.container = document.querySelector('.floating-particles');
@@ -30,14 +30,14 @@ class SimpleParticleSystem {
                 z-index: -1;
                 pointer-events: none;
             `;
-            
+
             const homeSection = document.getElementById('home');
             if (homeSection) {
                 homeSection.appendChild(this.container);
             }
         }
     }
-    
+
     createParticles() {
         const colors = [
             'rgba(255, 215, 0, 0.8)',  // Gold
@@ -46,37 +46,34 @@ class SimpleParticleSystem {
             'rgba(138, 43, 226, 0.5)', // Purple
             'rgba(255, 255, 255, 0.4)' // White
         ];
-        
+
         for (let i = 0; i < this.particleCount; i++) {
             const particle = document.createElement('div');
             const color = colors[i % colors.length];
             const size = Math.random() * 4 + 2; // 2-6px
             const duration = Math.random() * 6 + 4; // 4-10s
             const delay = Math.random() * 8; // 0-8s delay
-            
+
             particle.style.cssText = `
                 position: absolute;
                 width: ${size}px;
                 height: ${size}px;
                 background: radial-gradient(circle, ${color}, transparent);
                 border-radius: 50%;
-                box-shadow: 
-                    0 0 ${size * 2}px ${color},
-                    0 0 ${size * 4}px ${color.replace('0.', '0.2')};
                 left: ${Math.random() * 100}%;
                 top: ${Math.random() * 100}%;
                 animation: floatMagic ${duration}s ease-in-out infinite;
                 animation-delay: ${delay}s;
             `;
-            
+
             this.container.appendChild(particle);
             this.particles.push(particle);
         }
-        
+
         // Add animation styles if not already present
         this.addAnimationStyles();
     }
-    
+
     addAnimationStyles() {
         if (!document.querySelector('#particle-animations')) {
             const style = document.createElement('style');
@@ -109,38 +106,44 @@ class SimpleParticleSystem {
             document.head.appendChild(style);
         }
     }
-    
+
     // Add mouse interaction
     addMouseInteraction() {
+        let ticking = false;
         document.addEventListener('mousemove', (e) => {
-            const mouseX = e.clientX;
-            const mouseY = e.clientY;
-            
-            this.particles.forEach((particle, index) => {
-                const rect = particle.getBoundingClientRect();
-                const particleX = rect.left + rect.width / 2;
-                const particleY = rect.top + rect.height / 2;
-                
-                const distance = Math.sqrt(
-                    Math.pow(mouseX - particleX, 2) + 
-                    Math.pow(mouseY - particleY, 2)
-                );
-                
-                if (distance < 100) {
-                    const repulsion = (100 - distance) / 100;
-                    const angleX = (particleX - mouseX) * repulsion * 0.5;
-                    const angleY = (particleY - mouseY) * repulsion * 0.5;
-                    
-                    particle.style.transform = `translate(${angleX}px, ${angleY}px) scale(${1 + repulsion * 0.3})`;
-                    particle.style.opacity = Math.min(1, 0.6 + repulsion * 0.4);
-                } else {
-                    particle.style.transform = '';
-                    particle.style.opacity = '';
-                }
+            if (ticking) return;
+            ticking = true;
+            requestAnimationFrame(() => {
+                const mouseX = e.clientX;
+                const mouseY = e.clientY;
+
+                this.particles.forEach((particle) => {
+                    const rect = particle.getBoundingClientRect();
+                    const particleX = rect.left + rect.width / 2;
+                    const particleY = rect.top + rect.height / 2;
+
+                    const distance = Math.sqrt(
+                        Math.pow(mouseX - particleX, 2) +
+                        Math.pow(mouseY - particleY, 2)
+                    );
+
+                    if (distance < 100) {
+                        const repulsion = (100 - distance) / 100;
+                        const angleX = (particleX - mouseX) * repulsion * 0.5;
+                        const angleY = (particleY - mouseY) * repulsion * 0.5;
+
+                        particle.style.transform = `translate(${angleX}px, ${angleY}px) scale(${1 + repulsion * 0.3})`;
+                        particle.style.opacity = Math.min(1, 0.6 + repulsion * 0.4);
+                    } else {
+                        particle.style.transform = '';
+                        particle.style.opacity = '';
+                    }
+                });
+                ticking = false;
             });
         });
     }
-    
+
     destroy() {
         if (this.container && this.container.parentNode) {
             this.container.parentNode.removeChild(this.container);
@@ -155,7 +158,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Small delay to ensure styles are loaded
     setTimeout(() => {
         window.simpleParticles = new SimpleParticleSystem();
-        
+
         // Add mouse interaction after another delay
         setTimeout(() => {
             window.simpleParticles.addMouseInteraction();
