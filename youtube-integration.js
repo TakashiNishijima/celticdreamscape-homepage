@@ -151,7 +151,7 @@ class YouTubeChannelManager {
 
         return `
         <div class="video-card">
-            <div class="relative group cursor-pointer" onclick="window.open('https://www.youtube.com/watch?v=${videoId}','_blank')">
+            <div class="relative group cursor-pointer" onclick="if(typeof gtag==='function')gtag('event','youtube_click',{event_category:'video',event_label:'${title.replace(/'/g, '')}',video_id:'${videoId}'});window.open('https://www.youtube.com/watch?v=${videoId}','_blank')">
                 <img src="${thumb}" alt="${title}" class="w-full aspect-video object-cover" loading="lazy">
                 <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors flex items-center justify-center">
                     <svg class="w-14 h-14 text-white opacity-0 group-hover:opacity-90 transition-opacity drop-shadow-lg" fill="currentColor" viewBox="0 0 24 24">
