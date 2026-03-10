@@ -1,0 +1,63 @@
+name: Weekly Analytics Report
+
+on:
+  schedule:
+    # 毎週月曜 09:00 JST (日曜 00:00 UTC)
+    - cron: '0 0 * * 0'
+    # 毎月1日 09:00 JST
+    - cron: '0 0 1 * *'
+  workflow_dispatch:
+    inputs:
+      report_type:
+        description: 'Report type'
+        required: true
+        default: 'weekly'
+        type: choice
+        options:
+          - weekly
+          - monthly
+          - test
+
+jobs:
+  send-report:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        working-directory: scripts
+        run: npm install
+
+      - name: Determine report type
+        id: report-type
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "type=${{ github.event.inputs.report_type }}" >> $GITHUB_OUTPUT
+          elif [ "$(date +%d)" = "01" ]; then
+            echo "type=monthly" >> $GITHUB_OUTPUT
+          else
+            echo "type=weekly" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Generate and send report
+        working-directory: scripts
+        env:
+          GOOGLE_SERVICE_ACCOUNT_KEY: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_KEY }}
+          GA4_PROPERTY_ID: ${{ secrets.GA4_PROPERTY_ID }}
+          REPORT_EMAIL_TO: ${{ secrets.REPORT_EMAIL_TO }}
+          GMAIL_USER: ${{ secrets.GMAIL_USER }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+        run: |
+          FLAGS=""
+          if [ "${{ steps.report-type.outputs.type }}" = "monthly" ]; then
+            FLAGS="--monthly"
+          elif [ "${{ steps.report-type.outputs.type }}" = "test" ]; then
+            FLAGS="--test"
+          fi
+          node weekly-report.js $FLAGS
