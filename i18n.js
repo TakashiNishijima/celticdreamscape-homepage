@@ -33,6 +33,9 @@
         'share-copy-label': { ja: 'リンクをコピー', en: 'Copy Link' },
         // Footer
         'footer-desc': { ja: '古代ケルトの神話と現代サウンドデザインを融合させた、新しい形の音響体験。', en: 'A new sonic experience fusing ancient Celtic mythology with modern sound design.' },
+        // Floating CTA
+        'floating-spotify': { ja: 'Spotify', en: 'Spotify' },
+        'floating-subscribe': { ja: '登録', en: 'Subscribe' },
     };
 
     const complexBlocks = {
