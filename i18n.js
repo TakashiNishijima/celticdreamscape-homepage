@@ -49,10 +49,10 @@
     };
 
     function detectLanguage() {
+        // Default: English. Only switch to Japanese if user explicitly chose it.
         const saved = localStorage.getItem(LANG_KEY);
         if (saved) return saved;
-        const browserLang = navigator.language || navigator.userLanguage || 'en';
-        return browserLang.startsWith('ja') ? 'ja' : 'en';
+        return 'en';
     }
 
     function applyLanguage(lang) {
