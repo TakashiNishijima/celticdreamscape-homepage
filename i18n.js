@@ -81,6 +81,14 @@
         const mobileBtn = document.getElementById('lang-toggle-mobile');
         if (mobileBtn) mobileBtn.textContent = lang === 'ja' ? '🇬🇧 EN' : '🇯🇵 JP';
 
+        // Update Spotify embed locale
+        const spotifyEmbed = document.getElementById('spotify-embed');
+        if (spotifyEmbed) {
+            const locale = lang === 'ja' ? 'ja' : 'en-US';
+            const newSrc = spotifyEmbed.src.replace(/language=[^&]+/, `language=${locale}`);
+            if (spotifyEmbed.src !== newSrc) spotifyEmbed.src = newSrc;
+        }
+
         localStorage.setItem(LANG_KEY, lang);
     }
 
