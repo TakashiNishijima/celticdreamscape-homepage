@@ -776,11 +776,16 @@
             }
         });
 
-        // Share functions
+        // Language detection
+        const isJapanese = () => /^ja/i.test(navigator.language || '');
+
+        // Share functions (auto-detect language)
         function shareOnX() {
             gtag('event', 'share_x', { event_category: 'share', event_label: 'x_twitter' });
             const url = encodeURIComponent(window.location.href);
-            const text = encodeURIComponent('CelticDreamscape - ケルト音楽で癒しの旅へ 🌿✨');
+            const text = isJapanese()
+                ? encodeURIComponent('CelticDreamscape - ケルト音楽で癒しの旅へ 🌿✨ #CelticMusic #癒し #BGM')
+                : encodeURIComponent('CelticDreamscape - A healing journey through Celtic music 🌿✨ #CelticMusic #Ambient #Relaxing');
             window.open(`https://x.com/intent/tweet?url=${url}&text=${text}`, '_blank');
         }
         function shareOnLine() {
@@ -793,7 +798,8 @@
             navigator.clipboard.writeText(window.location.href).then(() => {
                 const btn = document.getElementById('copy-link-btn');
                 const orig = btn.innerHTML;
-                btn.innerHTML = '<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> コピー完了！';
+                const msg = isJapanese() ? 'コピー完了！' : 'Copied!';
+                btn.innerHTML = `<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> ${msg}`;
                 setTimeout(() => { btn.innerHTML = orig; }, 2000);
             });
         }
