@@ -1,0 +1,22 @@
+# CelticDreamscape robots.txt
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://sparkly-biscuit-a80353.netlify.app/sitemap.xml
+
+# AI Bots - Allow
+User-agent: GPTBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
