@@ -1,5 +1,5 @@
 // CelticDreamscape - Internationalization (i18n)
-// Auto-detect browser language and switch between Japanese/English
+// Default: English. Auto-detect Japanese browsers and switch.
 
 (function () {
     'use strict';
@@ -20,9 +20,19 @@
         'stat-sub-1': { ja: 'デジタル・ピルグリム', en: 'Digital Pilgrims' },
         'stat-sub-2': { ja: '音響の儀式', en: 'Sonic Rituals' },
         'stat-sub-3': { ja: 'デジタル・ドルイドの影響', en: 'Digital Druid Influence' },
+        // Section subtitles
+        'new-releases-sub': { ja: '最新の動画', en: 'Latest videos' },
+        'featured-sub': { ja: 'おすすめ動画', en: 'Recommended videos' },
+        'listen-sub': { ja: '各プラットフォームで配信中', en: 'Available on all platforms' },
+        // Buttons
+        'yt-channel-btn': { ja: 'YouTubeチャンネルを見る', en: 'View YouTube Channel' },
+        'listen-all-btn': { ja: 'Spotifyで全曲を聴く →', en: 'Listen all on Spotify →' },
+        // Share buttons
+        'share-x-label': { ja: 'Xでシェア', en: 'Share on X' },
+        'share-line-label': { ja: 'LINEでシェア', en: 'Share on LINE' },
+        'share-copy-label': { ja: 'リンクをコピー', en: 'Copy Link' },
         // Footer
         'footer-desc': { ja: '古代ケルトの神話と現代サウンドデザインを融合させた、新しい形の音響体験。', en: 'A new sonic experience fusing ancient Celtic mythology with modern sound design.' },
-        'listen-all-btn': { ja: 'Spotifyで全曲を聴く →', en: 'Listen all on Spotify →' },
     };
 
     const complexBlocks = {
@@ -41,11 +51,14 @@
     function detectLanguage() {
         const saved = localStorage.getItem(LANG_KEY);
         if (saved) return saved;
-        const browserLang = navigator.language || navigator.userLanguage || 'ja';
+        const browserLang = navigator.language || navigator.userLanguage || 'en';
         return browserLang.startsWith('ja') ? 'ja' : 'en';
     }
 
     function applyLanguage(lang) {
+        // Update HTML lang attribute
+        document.documentElement.lang = lang;
+
         // Simple translations
         for (const [id, texts] of Object.entries(translations)) {
             const el = document.getElementById(id);
@@ -64,6 +77,10 @@
         const btn = document.getElementById('lang-toggle');
         if (btn) btn.textContent = lang === 'ja' ? '🇬🇧 EN' : '🇯🇵 JP';
 
+        // Update mobile toggle button
+        const mobileBtn = document.getElementById('lang-toggle-mobile');
+        if (mobileBtn) mobileBtn.textContent = lang === 'ja' ? '🇬🇧 EN' : '🇯🇵 JP';
+
         localStorage.setItem(LANG_KEY, lang);
     }
 
@@ -77,8 +94,14 @@
         const lang = detectLanguage();
         applyLanguage(lang);
 
+        // Desktop toggle
         const toggleBtn = document.getElementById('lang-toggle');
         if (toggleBtn) toggleBtn.addEventListener('click', toggleLanguage);
+
+        // Mobile toggle
+        const mobileToggleBtn = document.getElementById('lang-toggle-mobile');
+        if (mobileToggleBtn) mobileToggleBtn.addEventListener('click', toggleLanguage);
+
         console.log(`🌍 Language: ${lang}`);
     });
 
