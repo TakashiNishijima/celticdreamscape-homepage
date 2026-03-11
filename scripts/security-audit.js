@@ -336,15 +336,28 @@ async function sendReport(html, totalIssues) {
         return;
     }
 
+    console.log(`📧 SMTP接続を準備中... (user: ${CONFIG.gmailUser?.substring(0, 3)}***)`);
+
     const transporter = nodemailer.createTransport({
-        service: 'gmail',
+        host: 'smtp.gmail.com',
+        port: 465,
+        secure: true,
         auth: { user: CONFIG.gmailUser, pass: CONFIG.gmailAppPassword },
     });
+
+    // SMTP接続テスト
+    try {
+        await transporter.verify();
+        console.log('✅ SMTP接続テスト成功');
+    } catch (verifyErr) {
+        console.error('❌ SMTP接続テスト失敗:', verifyErr.message);
+        throw verifyErr;
+    }
 
     const statusEmoji = totalIssues === 0 ? '✅' : '⚠️';
     const subject = `${statusEmoji} セキュリティ監査レポート - CelticDreamscape (${new Date().toLocaleDateString('ja-JP')})`;
 
-    await transporter.sendMail({
+    const info = await transporter.sendMail({
         from: `"Security Audit Bot" <${CONFIG.gmailUser}>`,
         to: CONFIG.reportEmailTo,
         subject,
@@ -352,6 +365,8 @@ async function sendReport(html, totalIssues) {
     });
 
     console.log(`📧 レポートを ${CONFIG.reportEmailTo} に送信しました`);
+    console.log(`   MessageId: ${info.messageId}`);
+    console.log(`   Response: ${info.response}`);
 }
 
 // ===== Main =====
