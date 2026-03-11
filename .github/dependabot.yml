@@ -1,0 +1,23 @@
+version: 2
+updates:
+  # npm パッケージの脆弱性チェック（scripts/配下）
+  - package-ecosystem: "npm"
+    directory: "/scripts"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+    labels:
+      - "dependencies"
+    commit-message:
+      prefix: "⬆️ deps:"
+
+  # GitHub Actions のバージョンチェック
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+    labels:
+      - "ci"
+    commit-message:
+      prefix: "🤖 ci:"
