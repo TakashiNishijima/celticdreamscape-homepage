@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-11T02:27:00.804Z",
+  "lastUpdated": "2026-03-12T02:33:05.034Z",
   "channel": {
     "channelId": "UCr9vkc_9muVAQOxiGJbV0wg",
     "title": "CelticDreamscape",
@@ -21,18 +21,55 @@
         "height": 800
       }
     },
-    "subscriberCount": "159",
-    "subscriberCountFormatted": "159",
-    "videoCount": "45",
-    "videoCountFormatted": "45",
-    "viewCount": "12830",
-    "viewCountFormatted": "12.8K"
+    "subscriberCount": "162",
+    "subscriberCountFormatted": "162",
+    "videoCount": "46",
+    "videoCountFormatted": "46",
+    "viewCount": "12923",
+    "viewCountFormatted": "12.9K"
   },
   "videos": [
     {
+      "videoId": "_wItmCpWtKU",
+      "title": "A harp echoes through the ancient forest 🌿#celticmusic",
+      "description": "🌿 Dewdrop Hymn of the Awakening Grove\n\nClose your eyes and listen.\nA gentle Celtic harp melody echoes through an ancient forest.\n\nWhere are you listening from? 🌍\n\n#celtic\n#harp\n#ambientmusic\n#fantasy\n#relaxingmusic",
+      "publishedAt": "2026-03-12T01:00:38Z",
+      "thumbnails": {
+        "default": {
+          "url": "https://i.ytimg.com/vi/_wItmCpWtKU/default.jpg",
+          "width": 120,
+          "height": 90
+        },
+        "medium": {
+          "url": "https://i.ytimg.com/vi/_wItmCpWtKU/mqdefault.jpg",
+          "width": 320,
+          "height": 180
+        },
+        "high": {
+          "url": "https://i.ytimg.com/vi/_wItmCpWtKU/hqdefault.jpg",
+          "width": 480,
+          "height": 360
+        },
+        "standard": {
+          "url": "https://i.ytimg.com/vi/_wItmCpWtKU/sddefault.jpg",
+          "width": 640,
+          "height": 480
+        },
+        "maxres": {
+          "url": "https://i.ytimg.com/vi/_wItmCpWtKU/maxresdefault.jpg",
+          "width": 1280,
+          "height": 720
+        }
+      },
+      "duration": "PT1M1S",
+      "viewCount": "3",
+      "viewCountFormatted": "3",
+      "likeCount": "0"
+    },
+    {
       "videoId": "0m7iMt9xjuQ",
-      "title": "Close your eyes. Can you hear the harp? 🌸 #celticmusic #shorts",
-      "description": "🌸 Blossom Hymn of the Faerie Glen\n\nStep into a magical Celtic fairy glen where spring has arrived in full bloom.\nCherry blossoms scatter their petals as a gentle harp melody echoes\nthrough the awakening forest — a hymn sung by the faeries to welcome spring.\n\n▶️ Full 1-Hour Version on our channel!\n🔔 Subscribe for weekly Celtic ambient journeys\n\n🎶 Music: Suno AI\n🎨 Visuals: Midjourney\n✍️ Direction: CelticDreamscape\n\n#CelticMusic #CelticHarp #AmbientMusic #StudyMusic #SleepMusic\n#RelaxingMusic #MeditationMusic #CherryBlossom #CelticDreamscape\n#FocusMusic #SpringMusic #Shorts",
+      "title": "You wake up in a Celtic forest🌸 #celticmusic #shorts",
+      "description": "🌸 Blossom Hymn of the Faerie Glen\n\nStep into a magical Celtic fairy glen where spring has arrived in full bloom.\nCherry blossoms scatter their petals as a gentle harp melody echoes\nthrough the awakening forest — a hymn sung by the faeries to welcome spring.\n\n▶️ Full 1-Hour Version on our channel!\n🔔 Subscribe for weekly Celtic ambient journeys\n\n🎶 Music: Suno AI\n🎨 Visuals: Midjourney\n✍️ Direction: CelticDreamscape\n\n#CelticMusic #CelticHarp #AmbientMusic #StudyMusic #SleepMusic\n#RelaxingMusic #MeditationMusic #CherryBlossom #CelticDreamscape\n#FocusMusic #SpringMusic #shorts \n#celtic #harp #fantasy #ambientmusic #relaxingmusic",
       "publishedAt": "2026-03-09T01:00:01Z",
       "thumbnails": {
         "default": {
@@ -62,9 +99,9 @@
         }
       },
       "duration": "PT1M1S",
-      "viewCount": "143",
-      "viewCountFormatted": "143",
-      "likeCount": "15"
+      "viewCount": "266",
+      "viewCountFormatted": "266",
+      "likeCount": "27"
     },
     {
       "videoId": "eCitEILp_Ho",
@@ -99,8 +136,8 @@
         }
       },
       "duration": "PT1H49S",
-      "viewCount": "4",
-      "viewCountFormatted": "4",
+      "viewCount": "8",
+      "viewCountFormatted": "8",
       "likeCount": "0"
     },
     {
@@ -136,13 +173,13 @@
         }
       },
       "duration": "PT1M1S",
-      "viewCount": "190",
-      "viewCountFormatted": "190",
+      "viewCount": "196",
+      "viewCountFormatted": "196",
       "likeCount": "4"
     },
     {
       "videoId": "jUMaDVc9qHo",
-      "title": "Celtic Harp in a Misty Dawn Forest 🌿 #celticmusic #studymusic #shorts",
+      "title": "You wake up in a misty Celtic forest 🌿 #celticmusic #studymusic #shorts",
       "description": "🌿 Dewdrop Hymn of the Awakening Grove\n\nA gentle Celtic harp melody in a misty ancient forest at dawn.\nClose your eyes and let the music carry you.\n\n▶️ Full 1-Hour Version on our channel!\n🔔 Subscribe for weekly Celtic ambient journeys",
       "publishedAt": "2026-03-04T13:43:06Z",
       "thumbnails": {
@@ -173,8 +210,8 @@
         }
       },
       "duration": "PT1M1S",
-      "viewCount": "912",
-      "viewCountFormatted": "912",
+      "viewCount": "918",
+      "viewCountFormatted": "918",
       "likeCount": "48"
     },
     {
@@ -210,8 +247,8 @@
         }
       },
       "duration": "PT1H14M29S",
-      "viewCount": "21",
-      "viewCountFormatted": "21",
+      "viewCount": "22",
+      "viewCountFormatted": "22",
       "likeCount": "1"
     },
     {
@@ -284,8 +321,8 @@
         }
       },
       "duration": "PT1H12M59S",
-      "viewCount": "255",
-      "viewCountFormatted": "255",
+      "viewCount": "256",
+      "viewCountFormatted": "256",
       "likeCount": "2"
     },
     {
@@ -402,7 +439,7 @@
     {
       "videoId": "r4D_-usNn8c",
       "title": "Celtic Harp Music for Study & Sleep | 1 Hour Moonstone Ridge Ambience 🌿",
-      "description": "Welcome to \"CelticDreamscape\" 🌿\n\nImmerse yourself in a tranquil Celtic dawn atop Moonstone Ridge, where shimmering standing stones glow under the first blush of sunlight. Let the gentle harp, low whistle and distant bodhrán carry you to a realm of calm reflection and natural beauty. 🌄✨\n\n🎵 Perfect for:\n📖 Study & Deep Focus\n😴 Deep Sleep & Insomnia Relief\n🧘 Meditation & Yoga\n💻 Work & Concentration\n🎨 Creative Flow & Reading\n🌧️ Rainy Day Relaxation\n\n━━━━━━━━━━━━━━━━━━━━\n\n🔔 Subscribe to CelticDreamscape for weekly Celtic music:\nhttps://www.youtube.com/@CelticDreamscape-i2k?sub_confirmation=1\n\n🎵 More Celtic Music:\n▶️ All Videos: https://www.youtube.com/@CelticDreamscape-i2k/videos\n\n━━━━━━━━━━━━━━━━━━━━\n\n🎶 Music: Suno AI\n🎨 Visuals: Midjourney\n✍️ Direction & Production: CelticDreamscape\n\n━━━━━━━━━━━━━━━━━━━━\n\n💬 What moment brought you the most peace? Tell us below 🌿\n\n━━━━━━━━━━━━━━━━━━━━\n\nceltic music, celtic harp, relaxing music, study music, sleep music,\ndeep sleep music, meditation music, ambient music, focus music,\nceltic instrumental, forest ambience, nature sounds, peaceful music,\n1 hour music, healing music, stress relief music, insomnia relief,\nceltic flute, irish music, celtic dreamscape,\n\n#CelticMusic #StudyMusic #SleepMusic #RelaxingMusic #AmbientMusic\n#MeditationMusic #CelticHarp #FocusMusic #HealingMusic #DeepSleep\n#CelticDreamscape #NatureAmbient #ForestMusic #PeacefulMusic",
+      "description": "Welcome to \"CelticDreamscape\" 🌿\n\nImmerse yourself in a tranquil Celtic dawn atop Moonstone Ridge, where shimmering standing stones glow under the first blush of sunlight. Let the gentle harp, low whistle and distant bodhrán carry you to a realm of calm reflection and natural beauty. 🌄✨\n\n🎵 Perfect for:\n📖 Study & Deep Focus\n😴 Deep Sleep & Insomnia Relief\n🧘 Meditation & Yoga\n💻 Work & Concentration\n🎨 Creative Flow & Reading\n🌧️ Rainy Day Relaxation\n\n━━━━━━━━━━━━━━━━━━━━\n\n🔔 Subscribe to CelticDreamscape for weekly Celtic music:\nhttps://www.youtube.com/@CelticDreamscape-i2k?sub_confirmation=1\n\n🎵 More Celtic Music:\n▶️ All Videos: https://www.youtube.com/@CelticDreamscape-i2k/videos\n\n━━━━━━━━━━━━━━━━━━━━\n\n🎶 Music: Suno AI\n🎨 Visuals: Midjourney\n✍️ Direction & Production: CelticDreamscape\n\n━━━━━━━━━━━━━━━��━━━━\n\n💬 What moment brought you the most peace? Tell us below 🌿\n\n━━━━━━━━━━━━━━━━━━━━\n\nceltic music, celtic harp, relaxing music, study music, sleep music,\ndeep sleep music, meditation music, ambient music, focus music,\nceltic instrumental, forest ambience, nature sounds, peaceful music,\n1 hour music, healing music, stress relief music, insomnia relief,\nceltic flute, irish music, celtic dreamscape,\n\n#CelticMusic #StudyMusic #SleepMusic #RelaxingMusic #AmbientMusic\n#MeditationMusic #CelticHarp #FocusMusic #HealingMusic #DeepSleep\n#CelticDreamscape #NatureAmbient #ForestMusic #PeacefulMusic",
       "publishedAt": "2025-07-17T10:01:27Z",
       "thumbnails": {
         "default": {
@@ -439,7 +476,7 @@
     {
       "videoId": "FWgOVmT262w",
       "title": "Celtic Music for Study & Relaxation | 1 Hour Eternal Dawn Ambience 🌅",
-      "description": "Welcome to \"CelticDreamscape\" 🌿\n\n☀️ Sail with us to a world where the dawn is eternal. We sail across turquoise waters, under coral skies, where flower-covered islands sparkle, and on colorful waves. The twinkling strings of harps, the low notes of flutes, and the gentle beat of the bodhrán will soothe your soul. 🌸⛵️\n\n🎵 Perfect for:\n📖 Study & Deep Focus\n😴 Deep Sleep & Insomnia Relief\n🧘 Meditation & Yoga\n💻 Work & Concentration\n🎨 Creative Flow & Reading\n🌧️ Rainy Day Relaxation\n\n━━━━━━━━━━━━━━━━━━━━\n\n🔔 Subscribe to CelticDreamscape for weekly Celtic music:\nhttps://www.youtube.com/@CelticDreamscape-i2k?sub_confirmation=1\n\n🎵 More Celtic Music:\n▶️ All Videos: https://www.youtube.com/@CelticDreamscape-i2k/videos\n\n━━━━━━━━━━━━━━━━━━━━\n\n🎶 Music: Suno AI\n🎨 Visuals: Midjourney\n✍️ Direction & Production: CelticDreamscape\n\n━��━━━━━━━━━━━━━━━━━━\n\n💬 What moment brought you the most peace? Tell us below 🌿\n\n━━━━━━━━━━━━━━━━━━━━\n\nceltic music, celtic harp, relaxing music, study music, sleep music,\ndeep sleep music, meditation music, ambient music, focus music,\nceltic instrumental, forest ambience, nature sounds, peaceful music,\n1 hour music, healing music, stress relief music, insomnia relief,\nceltic flute, irish music, celtic dreamscape,\n\n#CelticMusic #StudyMusic #SleepMusic #RelaxingMusic #AmbientMusic\n#MeditationMusic #CelticHarp #FocusMusic #HealingMusic #DeepSleep\n#CelticDreamscape #NatureAmbient #ForestMusic #PeacefulMusic",
+      "description": "Welcome to \"CelticDreamscape\" 🌿\n\n☀️ Sail with us to a world where the dawn is eternal. We sail across turquoise waters, under coral skies, where flower-covered islands sparkle, and on colorful waves. The twinkling strings of harps, the low notes of flutes, and the gentle beat of the bodhrán will soothe your soul. 🌸⛵️\n\n🎵 Perfect for:\n📖 Study & Deep Focus\n😴 Deep Sleep & Insomnia Relief\n🧘 Meditation & Yoga\n💻 Work & Concentration\n🎨 Creative Flow & Reading\n🌧️ Rainy Day Relaxation\n\n━━━━━━━━━━━━━━━━━━━━\n\n🔔 Subscribe to CelticDreamscape for weekly Celtic music:\nhttps://www.youtube.com/@CelticDreamscape-i2k?sub_confirmation=1\n\n🎵 More Celtic Music:\n▶️ All Videos: https://www.youtube.com/@CelticDreamscape-i2k/videos\n\n━━━━━━━━━━━━━━━━━━━━\n\n🎶 Music: Suno AI\n🎨 Visuals: Midjourney\n✍️ Direction & Production: CelticDreamscape\n\n━━━━━━━━━━━━━━━━━━━━\n\n💬 What moment brought you the most peace? Tell us below 🌿\n\n━━━━━━━━━━━━━━━━━━━━\n\nceltic music, celtic harp, relaxing music, study music, sleep music,\ndeep sleep music, meditation music, ambient music, focus music,\nceltic instrumental, forest ambience, nature sounds, peaceful music,\n1 hour music, healing music, stress relief music, insomnia relief,\nceltic flute, irish music, celtic dreamscape,\n\n#CelticMusic #StudyMusic #SleepMusic #RelaxingMusic #AmbientMusic\n#MeditationMusic #CelticHarp #FocusMusic #HealingMusic #DeepSleep\n#CelticDreamscape #NatureAmbient #ForestMusic #PeacefulMusic",
       "publishedAt": "2025-07-13T10:00:19Z",
       "thumbnails": {
         "default": {
@@ -513,7 +550,7 @@
     {
       "videoId": "ohV7sQ0OLVM",
       "title": "Celtic Music for Deep Sleep | 1 Hour Where the Fireflies Sing 🌿",
-      "description": "Welcome to \"CelticDreamscape\" 🌿\n\nStep into a dreamy Celtic summer night in “Where the Fireflies Sing” — a peaceful landscape where gentle moonlight dances on the meadow and fireflies glow like floating whispers. Let the soothing Celtic harp and soft flute melodies guide you into deep relaxation and inner calm. 🕯️✨\n\n🧚‍♀️ Let your heart drift in a world where the fireflies sing... 🌌\n\nPlease subscribe to our channel and join us on a peaceful journey through natural beauty and timeless Celtic magic.\n\n🎵 Perfect for:\n📖 Study & Deep Focus\n😴 Deep Sleep & Insomnia Relief\n🧘 Meditation & Yoga\n💻 Work & Concentration\n🎨 Creative Flow & Reading\n🌧️ Rainy Day Relaxation\n\n━━━━━━━━━━━━━━━━━━━━\n\n🔔 Subscribe to CelticDreamscape for weekly Celtic music:\nhttps://www.youtube.com/@CelticDreamscape-i2k?sub_confirmation=1\n\n🎵 More Celtic Music:\n▶��� All Videos: https://www.youtube.com/@CelticDreamscape-i2k/videos\n\n━━━━━━━━━━━━━━━━━━━━\n\n🎶 Music: Suno AI\n🎨 Visuals: Midjourney\n✍️ Direction & Production: CelticDreamscape\n\n━━━━━━━━━━━━━━━━━━━━\n\n💬 What moment brought you the most peace? Tell us below 🌿\n\n━━━━━━━━━━━━━━━━━━━━\n\nceltic music, celtic harp, relaxing music, study music, sleep music,\ndeep sleep music, meditation music, ambient music, focus music,\nceltic instrumental, forest ambience, nature sounds, peaceful music,\n1 hour music, healing music, stress relief music, insomnia relief,\nceltic flute, irish music, celtic dreamscape,\n\n#CelticMusic #StudyMusic #SleepMusic #RelaxingMusic #AmbientMusic\n#MeditationMusic #CelticHarp #FocusMusic #HealingMusic #DeepSleep\n#CelticDreamscape #NatureAmbient #ForestMusic #PeacefulMusic",
+      "description": "Welcome to \"CelticDreamscape\" 🌿\n\nStep into a dreamy Celtic summer night in “Where the Fireflies Sing” — a peaceful landscape where gentle moonlight dances on the meadow and fireflies glow like floating whispers. Let the soothing Celtic harp and soft flute melodies guide you into deep relaxation and inner calm. 🕯️✨\n\n🧚‍♀️ Let your heart drift in a world where the fireflies sing... 🌌\n\nPlease subscribe to our channel and join us on a peaceful journey through natural beauty and timeless Celtic magic.\n\n🎵 Perfect for:\n📖 Study & Deep Focus\n😴 Deep Sleep & Insomnia Relief\n🧘 Meditation & Yoga\n💻 Work & Concentration\n🎨 Creative Flow & Reading\n🌧️ Rainy Day Relaxation\n\n━━━━━━━━━━━━━━━━━━━━\n\n🔔 Subscribe to CelticDreamscape for weekly Celtic music:\nhttps://www.youtube.com/@CelticDreamscape-i2k?sub_confirmation=1\n\n🎵 More Celtic Music:\n▶️ All Videos: https://www.youtube.com/@CelticDreamscape-i2k/videos\n\n━━━━━━━━━━━━━━━━━━━━\n\n🎶 Music: Suno AI\n🎨 Visuals: Midjourney\n✍️ Direction & Production: CelticDreamscape\n\n━━━━━━━━━━━━━━━━━━━━\n\n💬 What moment brought you the most peace? Tell us below 🌿\n\n━━━━━━━━━━━━━━━━━━━━\n\nceltic music, celtic harp, relaxing music, study music, sleep music,\ndeep sleep music, meditation music, ambient music, focus music,\nceltic instrumental, forest ambience, nature sounds, peaceful music,\n1 hour music, healing music, stress relief music, insomnia relief,\nceltic flute, irish music, celtic dreamscape,\n\n#CelticMusic #StudyMusic #SleepMusic #RelaxingMusic #AmbientMusic\n#MeditationMusic #CelticHarp #FocusMusic #HealingMusic #DeepSleep\n#CelticDreamscape #NatureAmbient #ForestMusic #PeacefulMusic",
       "publishedAt": "2025-07-09T10:01:31Z",
       "thumbnails": {
         "default": {
@@ -550,7 +587,7 @@
     {
       "videoId": "vC7zYBQB3Rc",
       "title": "Celtic Music for Sleep & Relaxation | 1 Hour Winter Aurora Ambience ❄️",
-      "description": "❄️ Beneath the shimmering winter aurora, let yourself be enchanted by the sounds of soft harps, low flutes and uilleann pipes, slow your heart rate and let yourself drift off into gentle dreams in the gentle glow of ancient Celtic magic. ✨\n\nPlease subscribe to our channel and join us on a peaceful journey through natural beauty and timeless Celtic magic. 🌌\n\n🎵 Perfect for:\n📖 Study & Deep Focus\n😴 Deep Sleep & Insomnia Relief\n🧘 Meditation & Yoga\n💻 Work & Concentration\n🎨 Creative Flow & Reading\n🌧️ Rainy Day Relaxation\n\n━━━━━━━━━━━━━━━━━━━━\n\n🔔 Subscribe to CelticDreamscape for weekly Celtic music:\nhttps://www.youtube.com/@CelticDreamscape-i2k?sub_confirmation=1\n\n🎵 More Celtic Music:\n▶️ All Videos: https://www.youtube.com/@CelticDreamscape-i2k/videos\n\n━━━━━━━━━━━━━━━━━━━━\n\n🎶 Music: Suno AI\n🎨 Visuals: Midjourney\n✍️ Direction & Production: CelticDreamscape\n\n━━━━━━━━━━━━━━━━━━━━\n\n💬 What moment brought you the most peace? Tell us below 🌿\n\n━━━━━━━━━━━━━━━━━━━━\n\nceltic music, celtic harp, relaxing music, study music, sleep music,\ndeep sleep music, meditation music, ambient music, focus music,\nceltic instrumental, forest ambience, nature sounds, peaceful music,\n1 hour music, healing music, stress relief music, insomnia relief,\nceltic flute, irish music, celtic dreamscape,\n\n#CelticMusic #StudyMusic #SleepMusic #RelaxingMusic #AmbientMusic\n#MeditationMusic #CelticHarp #FocusMusic #HealingMusic #DeepSleep\n#CelticDreamscape #NatureAmbient #ForestMusic #PeacefulMusic",
+      "description": "❄️ Beneath the shimmering winter aurora, let yourself be enchanted by the sounds of soft harps, low flutes and uilleann pipes, slow your heart rate and let yourself drift off into gentle dreams in the gentle glow of ancient Celtic magic. ✨\n\nPlease subscribe to our channel and join us on a peaceful journey through natural beauty and timeless Celtic magic. 🌌\n\n🎵 Perfect for:\n📖 Study & Deep Focus\n😴 Deep Sleep & Insomnia Relief\n🧘 Meditation & Yoga\n💻 Work & Concentration\n🎨 Creative Flow & Reading\n🌧️ Rainy Day Relaxation\n\n━━━━━━━━━━━━━━━━━━━━\n\n🔔 Subscribe to CelticDreamscape for weekly Celtic music:\nhttps://www.youtube.com/@CelticDreamscape-i2k?sub_confirmation=1\n\n🎵 More Celtic Music:\n▶️ All Videos: https://www.youtube.com/@CelticDreamscape-i2k/videos\n\n━━━━━━━━━━━━━━━━━���━━\n\n🎶 Music: Suno AI\n🎨 Visuals: Midjourney\n✍️ Direction & Production: CelticDreamscape\n\n━━━━━━━━━━━━━━━━━━━━\n\n💬 What moment brought you the most peace? Tell us below 🌿\n\n━━━━━━━━━━━━━━━━━━━━\n\nceltic music, celtic harp, relaxing music, study music, sleep music,\ndeep sleep music, meditation music, ambient music, focus music,\nceltic instrumental, forest ambience, nature sounds, peaceful music,\n1 hour music, healing music, stress relief music, insomnia relief,\nceltic flute, irish music, celtic dreamscape,\n\n#CelticMusic #StudyMusic #SleepMusic #RelaxingMusic #AmbientMusic\n#MeditationMusic #CelticHarp #FocusMusic #HealingMusic #DeepSleep\n#CelticDreamscape #NatureAmbient #ForestMusic #PeacefulMusic",
       "publishedAt": "2025-07-07T10:01:29Z",
       "thumbnails": {
         "default": {
@@ -587,7 +624,7 @@
     {
       "videoId": "tNTRkx5anmY",
       "title": "Celtic Harp Music for Study & Meditation | 1 Hour Amethyst Dawn Ambience 🌿",
-      "description": "Welcome to \"CelticDreamscape\" 🌿\n\n☘️ Immerse yourself in “Amethyst Dawn at Tír na nÓg,” where lilac skies illuminate an ageless Celtic realm. Gentle harp, whispering pipes, and a heart-beat drum invite your spirit to wander through heather-covered hills and ancient stone circles. Close your eyes, breathe slowly, and let the first light of Tír na nÓg soothe your mind.\n\nPlease subscribe to our channel and join us on a peaceful journey through natural beauty and timeless Celtic magic. 🌿\n\n🎵 Perfect for:\n📖 Study & Deep Focus\n😴 Deep Sleep & Insomnia Relief\n🧘 Meditation & Yoga\n💻 Work & Concentration\n🎨 Creative Flow & Reading\n🌧️ Rainy Day Relaxation\n\n━━━━━━━━━━━━━━━━━━━━\n\n🔔 Subscribe to CelticDreamscape for weekly Celtic music:\nhttps://www.youtube.com/@CelticDreamscape-i2k?sub_confirmation=1\n\n🎵 More Celtic Music:\n▶️ All Videos: https://www.youtube.com/@CelticDreamscape-i2k/videos\n\n━━━━━━━━━━━━━━━━━━━━\n\n🎶 Music: Suno AI\n🎨 Visuals: Midjourney\n✍️ Direction & Production: CelticDreamscape\n\n━━━━━━━━━━━━━━━━━━━━\n\n💬 What moment brought you the most peace? Tell us below 🌿\n\n━━━━━━━━━━━━━━━━━━━━\n\nceltic music, celtic harp, relaxing music, study music, sleep music,\ndeep sleep music, meditation music, ambient music, focus music,\nceltic instrumental, forest ambience, nature sounds, peaceful music,\n1 hour music, healing music, stress relief music, insomnia relief,\nceltic flute, irish music, celtic dreamscape,\n\n#CelticMusic #StudyMusic #SleepMusic #RelaxingMusic #AmbientMusic\n#MeditationMusic #CelticHarp #FocusMusic #HealingMusic #DeepSleep\n#CelticDreamscape #NatureAmbient #ForestMusic #PeacefulMusic",
+      "description": "Welcome to \"CelticDreamscape\" 🌿\n\n☘️ Immerse yourself in “Amethyst Dawn at Tír na nÓg,” where lilac skies illuminate an ageless Celtic realm. Gentle harp, whispering pipes, and a heart-beat drum invite your spirit to wander through heather-covered hills and ancient stone circles. Close your eyes, breathe slowly, and let the first light of Tír na nÓg soothe your mind.\n\nPlease subscribe to our channel and join us on a peaceful journey through natural beauty and timeless Celtic magic. 🌿\n\n🎵 Perfect for:\n📖 Study & Deep Focus\n😴 Deep Sleep & Insomnia Relief\n🧘 Meditation & Yoga\n💻 Work & Concentration\n🎨 Creative Flow & Reading\n🌧️ Rainy Day Relaxation\n\n━━━━━━━━━━━━━━━━━━━━\n\n🔔 Subscribe to CelticDreamscape for weekly Celtic music:\nhttps://www.youtube.com/@CelticDreamscape-i2k?sub_confirmation=1\n\n🎵 More Celtic Music:\n▶️ All Videos: https://www.youtube.com/@CelticDreamscape-i2k/videos\n\n━━━━━━━━━━━━━━━━━━━━\n\n🎶 Music: Suno AI\n🎨 Visuals: Midjourney\n✍️ Direction & Production: CelticDreamscape\n\n━━━━━━━━━━━━━━━━━━━━\n\n💬 What moment brought you the most peace? Tell us below 🌿\n\n━━━━━━━━��━━━━━━━━━━━\n\nceltic music, celtic harp, relaxing music, study music, sleep music,\ndeep sleep music, meditation music, ambient music, focus music,\nceltic instrumental, forest ambience, nature sounds, peaceful music,\n1 hour music, healing music, stress relief music, insomnia relief,\nceltic flute, irish music, celtic dreamscape,\n\n#CelticMusic #StudyMusic #SleepMusic #RelaxingMusic #AmbientMusic\n#MeditationMusic #CelticHarp #FocusMusic #HealingMusic #DeepSleep\n#CelticDreamscape #NatureAmbient #ForestMusic #PeacefulMusic",
       "publishedAt": "2025-07-05T10:01:27Z",
       "thumbnails": {
         "default": {
@@ -624,7 +661,7 @@
     {
       "videoId": "sNNYqtPwik8",
       "title": "Celtic Music for Sleep & Focus | 1 Hour Silent Moor Ambience 🌙",
-      "description": "Welcome to \"CelticDreamscape\" 🌿\n\nStep beneath the “Crimson Veil above the Silent Moor.” Gentle harp arpeggios, wooden flutes, and a soft bodhrán heartbeat weave a calming tapestry while our Celtic heroine lights her lantern and walks the mist-covered boardwalk. Close your eyes, breathe deeply, and let this soothing melody guide you into quiet wonder. 🍂✨\n\nPlease subscribe to our channel and join us on a peaceful journey through natural beauty and timeless Celtic magic. 🌟🎻\n\n🎵 Perfect for:\n📖 Study & Deep Focus\n😴 Deep Sleep & Insomnia Relief\n🧘 Meditation & Yoga\n💻 Work & Concentration\n🎨 Creative Flow & Reading\n🌧️ Rainy Day Relaxation\n\n━━━━━━━━━━━━━━━━━━━━\n\n🔔 Subscribe to CelticDreamscape for weekly Celtic music:\nhttps://www.youtube.com/@CelticDreamscape-i2k?sub_confirmation=1\n\n🎵 More Celtic Music:\n▶️ All Videos: https://www.youtube.com/@CelticDreamscape-i2k/videos\n\n━━━━━━━━━━━━━━━━━━━━\n\n🎶 Music: Suno AI\n🎨 Visuals: Midjourney\n✍️ Direction & Production: CelticDreamscape\n\n━━━━━━━━━━━━━━━━━━━━\n\n💬 What moment brought you the most peace? Tell us below 🌿\n\n━━━━━━━━━━━━━━━━━━━━\n\nceltic music, celtic harp, relaxing music, study music, sleep music,\ndeep sleep music, meditation music, ambient music, focus music,\nceltic instrumental, forest ambience, nature sounds, peaceful music,\n1 hour music, healing music, stress relief music, insomnia relief,\nceltic flute, irish music, celtic dreamscape,\n\n#CelticMusic #StudyMusic #SleepMusic #RelaxingMusic #AmbientMusic\n#MeditationMusic #CelticHarp #FocusMusic #HealingMusic #DeepSleep\n#CelticDreamscape #NatureAmbient #ForestMusic #PeacefulMusic",
+      "description": "Welcome to \"CelticDreamscape\" 🌿\n\nStep beneath the “Crimson Veil above the Silent Moor.” Gentle harp arpeggios, wooden flutes, and a soft bodhrán heartbeat weave a calming tapestry while our Celtic heroine lights her lantern and walks the mist-covered boardwalk. Close your eyes, breathe deeply, and let this soothing melody guide you into quiet wonder. 🍂✨\n\nPlease subscribe to our channel and join us on a peaceful journey through natural beauty and timeless Celtic magic. 🌟🎻\n\n🎵 Perfect for:\n���� Study & Deep Focus\n😴 Deep Sleep & Insomnia Relief\n🧘 Meditation & Yoga\n💻 Work & Concentration\n🎨 Creative Flow & Reading\n🌧️ Rainy Day Relaxation\n\n━━━━━━━━━━━━━━━━━━━━\n\n🔔 Subscribe to CelticDreamscape for weekly Celtic music:\nhttps://www.youtube.com/@CelticDreamscape-i2k?sub_confirmation=1\n\n🎵 More Celtic Music:\n▶️ All Videos: https://www.youtube.com/@CelticDreamscape-i2k/videos\n\n━━━━━━━━━━━━━━━━━━━━\n\n🎶 Music: Suno AI\n🎨 Visuals: Midjourney\n✍️ Direction & Production: CelticDreamscape\n\n━━━━━━━━━━━━━━━━━━━━\n\n💬 What moment brought you the most peace? Tell us below 🌿\n\n━━━━━━━━━━━━━━━━━━━━\n\nceltic music, celtic harp, relaxing music, study music, sleep music,\ndeep sleep music, meditation music, ambient music, focus music,\nceltic instrumental, forest ambience, nature sounds, peaceful music,\n1 hour music, healing music, stress relief music, insomnia relief,\nceltic flute, irish music, celtic dreamscape,\n\n#CelticMusic #StudyMusic #SleepMusic #RelaxingMusic #AmbientMusic\n#MeditationMusic #CelticHarp #FocusMusic #HealingMusic #DeepSleep\n#CelticDreamscape #NatureAmbient #ForestMusic #PeacefulMusic",
       "publishedAt": "2025-07-03T10:01:29Z",
       "thumbnails": {
         "default": {
@@ -661,7 +698,7 @@
     {
       "videoId": "Ban-Z82TFWo",
       "title": "Celtic Music for Deep Sleep & Study | 1 Hour Moonlit Dreams Ambience ✨",
-      "description": "Welcome to \"CelticDreamscape\" 🌿\n\nIn the moon-kissed ruins of an ancient stone workshop, a young Celtic weaver guides strands of radiant gold skyward. Each shimmering filament drifts into the heavens, blossoming into new constellations above. Harp arpeggios flow like gentle waves, tender fiddle lines trace every luminous thread, and soft wooden-flute sparks glimmer across a deep, enveloping drone—inviting you to rest, create, and dream beneath the stars. ✨🧶🌙\n\nPlease subscribe to our channel and join us on a peaceful journey through natural beauty and timeless Celtic magic.\n\n🎵 Perfect for:\n📖 Study & Deep Focus\n😴 Deep Sleep & Insomnia Relief\n🧘 Meditation & Yoga\n💻 Work & Concentration\n🎨 Creative Flow & Reading\n🌧️ Rainy Day Relaxation\n\n━━━━━━━━━━━━━━━━━━━━\n\n🔔 Subscribe to CelticDreamscape for weekly Celtic music:\nhttps://www.youtube.com/@CelticDreamscape-i2k?sub_confirmation=1\n\n🎵 More Celtic Music:\n▶️ All Videos: https://www.youtube.com/@CelticDreamscape-i2k/videos\n\n━━━━━━━━━━━━━━━━━━━━\n\n🎶 Music: Suno AI\n🎨 Visuals: Midjourney\n✍️ Direction & Production: CelticDreamscape\n\n━━━━━━━━━━━━━━━━━━━━\n\n💬 What moment brought you the most peace? Tell us below 🌿\n\n━━━━━━━━━━━━━━━━━━━━\n\nceltic music, celtic harp, relaxing music, study music, sleep music,\ndeep sleep music, meditation music, ambient music, focus music,\nceltic instrumental, forest ambience, nature sounds, peaceful music,\n1 hour music, healing music, stress relief music, insomnia relief,\nceltic flute, irish music, celtic dreamscape,\n\n#CelticMusic #StudyMusic #SleepMusic #RelaxingMusic #AmbientMusic\n#MeditationMusic #CelticHarp #FocusMusic #HealingMusic #DeepSleep\n#CelticDreamscape #NatureAmbient #ForestMusic #PeacefulMusic",
+      "description": "Welcome to \"CelticDreamscape\" 🌿\n\nIn the moon-kissed ruins of an ancient stone workshop, a young Celtic weaver guides strands of radiant gold skyward. Each shimmering filament drifts into the heavens, blossoming into new constellations above. Harp arpeggios flow like gentle waves, tender fiddle lines trace every luminous thread, and soft wooden-flute sparks glimmer across a deep, enveloping drone—inviting you to rest, create, and dream beneath the stars. ✨🧶🌙\n\nPlease subscribe to our channel and join us on a peaceful journey through natural beauty and timeless Celtic magic.\n\n🎵 Perfect for:\n📖 Study & Deep Focus\n😴 Deep Sleep & Insomnia Relief\n🧘 Meditation & Yoga\n💻 Work & Concentration\n🎨 Creative Flow & Reading\n🌧️ Rainy Day Relaxation\n\n━━━━━━━━━━━━━━━━━━━━\n\n🔔 Subscribe to CelticDreamscape for weekly Celtic music:\nhttps://www.youtube.com/@CelticDreamscape-i2k?sub_confirmation=1\n\n🎵 More Celtic Music:\n▶️ All Videos: https://www.youtube.com/@CelticDreamscape-i2k/videos\n\n━━━━━━━━���━━━━━━━━━━━\n\n🎶 Music: Suno AI\n🎨 Visuals: Midjourney\n✍️ Direction & Production: CelticDreamscape\n\n━━━━━━━━━━━━━━━━━━━━\n\n💬 What moment brought you the most peace? Tell us below 🌿\n\n━━━━━━━━━━━━━━━━━━━━\n\nceltic music, celtic harp, relaxing music, study music, sleep music,\ndeep sleep music, meditation music, ambient music, focus music,\nceltic instrumental, forest ambience, nature sounds, peaceful music,\n1 hour music, healing music, stress relief music, insomnia relief,\nceltic flute, irish music, celtic dreamscape,\n\n#CelticMusic #StudyMusic #SleepMusic #RelaxingMusic #AmbientMusic\n#MeditationMusic #CelticHarp #FocusMusic #HealingMusic #DeepSleep\n#CelticDreamscape #NatureAmbient #ForestMusic #PeacefulMusic",
       "publishedAt": "2025-06-29T10:00:15Z",
       "thumbnails": {
         "default": {
@@ -698,7 +735,7 @@
     {
       "videoId": "ftuScCsjtos",
       "title": "Celtic Music for Relaxation & Sleep | 1 Hour Glass Sanctuary Ambience 🌿",
-      "description": "Welcome to \"CelticDreamscape\" 🌿\n\nPrismatic Prayer of the Glass Sanctuary unfolds as dawn pours through towering crystal windows, scattering rainbow light across an ivy-clad chapel. Let the gentle Celtic harp and wooden flute carry you into a tranquil morning meditation. Breathe slowly and feel each beam of color warm your soul.\n\nPlease subscribe to our channel and join us on a peaceful journey through natural beauty and timeless Celtic magic.\n\n🎵 Perfect for:\n📖 Study & Deep Focus\n😴 Deep Sleep & Insomnia Relief\n🧘 Meditation & Yoga\n💻 Work & Concentration\n🎨 Creative Flow & Reading\n🌧️ Rainy Day Relaxation\n\n━━━━━━━━━━━━━━━━━━━━\n\n🔔 Subscribe to CelticDreamscape for weekly Celtic music:\nhttps://www.youtube.com/@CelticDreamscape-i2k?sub_confirmation=1\n\n🎵 More Celtic Music:\n▶️ All Videos: https://www.youtube.com/@CelticDreamscape-i2k/videos\n\n━━━━━━━���━━━━━━━━━━━━\n\n🎶 Music: Suno AI\n🎨 Visuals: Midjourney\n✍️ Direction & Production: CelticDreamscape\n\n━━━━━━━━━━━━━━━━━━━━\n\n💬 What moment brought you the most peace? Tell us below 🌿\n\n━━━━━━━━━━━━━━━━━━━━\n\nceltic music, celtic harp, relaxing music, study music, sleep music,\ndeep sleep music, meditation music, ambient music, focus music,\nceltic instrumental, forest ambience, nature sounds, peaceful music,\n1 hour music, healing music, stress relief music, insomnia relief,\nceltic flute, irish music, celtic dreamscape,\n\n#CelticMusic #StudyMusic #SleepMusic #RelaxingMusic #AmbientMusic\n#MeditationMusic #CelticHarp #FocusMusic #HealingMusic #DeepSleep\n#CelticDreamscape #NatureAmbient #ForestMusic #PeacefulMusic",
+      "description": "Welcome to \"CelticDreamscape\" 🌿\n\nPrismatic Prayer of the Glass Sanctuary unfolds as dawn pours through towering crystal windows, scattering rainbow light across an ivy-clad chapel. Let the gentle Celtic harp and wooden flute carry you into a tranquil morning meditation. Breathe slowly and feel each beam of color warm your soul.\n\nPlease subscribe to our channel and join us on a peaceful journey through natural beauty and timeless Celtic magic.\n\n🎵 Perfect for:\n📖 Study & Deep Focus\n😴 Deep Sleep & Insomnia Relief\n🧘 Meditation & Yoga\n💻 Work & Concentration\n🎨 Creative Flow & Reading\n🌧️ Rainy Day Relaxation\n\n━━━━━━━━━━━━━━━━━━━━\n\n🔔 Subscribe to CelticDreamscape for weekly Celtic music:\nhttps://www.youtube.com/@CelticDreamscape-i2k?sub_confirmation=1\n\n🎵 More Celtic Music:\n▶️ All Videos: https://www.youtube.com/@CelticDreamscape-i2k/videos\n\n━━━━━━━━━━━━━━━━━━━━\n\n🎶 Music: Suno AI\n🎨 Visuals: Midjourney\n✍️ Direction & Production: CelticDreamscape\n\n━━━━━━━━━━━━━━━━━━━━\n\n💬 What moment brought you the most peace? Tell us below 🌿\n\n━━━━━━━━━━━━━━━━━━━━\n\nceltic music, celtic harp, relaxing music, study music, sleep music,\ndeep sleep music, meditation music, ambient music, focus music,\nceltic instrumental, forest ambience, nature sounds, peaceful music,\n1 hour music, healing music, stress relief music, insomnia relief,\nceltic flute, irish music, celtic dreamscape,\n\n#CelticMusic #StudyMusic #SleepMusic #RelaxingMusic #AmbientMusic\n#MeditationMusic #CelticHarp #FocusMusic #HealingMusic #DeepSleep\n#CelticDreamscape #NatureAmbient #ForestMusic #PeacefulMusic",
       "publishedAt": "2025-06-27T10:01:13Z",
       "thumbnails": {
         "default": {
@@ -772,7 +809,7 @@
     {
       "videoId": "0suORu-u7To",
       "title": "Celtic Music for Meditation & Sleep | 1 Hour Hidden Spring Ambience 🌿",
-      "description": "Welcome to \"CelticDreamscape\" 🌿\n\nBeneath a hushed forest canopy, a hidden spring shimmers with moon-lit silver ripples. 🌙💧 “Silver Ripples of the Hidden Spring” drifts through gentle harp arpeggios, whispering low whistles, and the soft heartbeat of a bodhrán—perfect for study, meditation, or slipping into peaceful dreams. Let the quiet glow of Celtic magic carry you tonight. ✨🍃\n\nPlease subscribe to our channel and join us on a peaceful journey through natural beauty and timeless Celtic magic.\n\n🎵 Perfect for:\n📖 Study & Deep Focus\n😴 Deep Sleep & Insomnia Relief\n🧘 Meditation & Yoga\n💻 Work & Concentration\n🎨 Creative Flow & Reading\n��️ Rainy Day Relaxation\n\n━━━━━━━━━━━━━━━━━━━━\n\n🔔 Subscribe to CelticDreamscape for weekly Celtic music:\nhttps://www.youtube.com/@CelticDreamscape-i2k?sub_confirmation=1\n\n🎵 More Celtic Music:\n▶️ All Videos: https://www.youtube.com/@CelticDreamscape-i2k/videos\n\n━━━━━━━━━━━━━━━━━━━━\n\n🎶 Music: Suno AI\n🎨 Visuals: Midjourney\n✍️ Direction & Production: CelticDreamscape\n\n━━━━━━━━━━━━━━━━━━━━\n\n💬 What moment brought you the most peace? Tell us below 🌿\n\n━━━━━━━━━━━━━━━━━━━━\n\nceltic music, celtic harp, relaxing music, study music, sleep music,\ndeep sleep music, meditation music, ambient music, focus music,\nceltic instrumental, forest ambience, nature sounds, peaceful music,\n1 hour music, healing music, stress relief music, insomnia relief,\nceltic flute, irish music, celtic dreamscape,\n\n#CelticMusic #StudyMusic #SleepMusic #RelaxingMusic #AmbientMusic\n#MeditationMusic #CelticHarp #FocusMusic #HealingMusic #DeepSleep\n#CelticDreamscape #NatureAmbient #ForestMusic #PeacefulMusic",
+      "description": "Welcome to \"CelticDreamscape\" 🌿\n\nBeneath a hushed forest canopy, a hidden spring shimmers with moon-lit silver ripples. 🌙💧 “Silver Ripples of the Hidden Spring” drifts through gentle harp arpeggios, whispering low whistles, and the soft heartbeat of a bodhrán—perfect for study, meditation, or slipping into peaceful dreams. Let the quiet glow of Celtic magic carry you tonight. ✨🍃\n\nPlease subscribe to our channel and join us on a peaceful journey through natural beauty and timeless Celtic magic.\n\n🎵 Perfect for:\n📖 Study & Deep Focus\n😴 Deep Sleep & Insomnia Relief\n🧘 Meditation & Yoga\n💻 Work & Concentration\n🎨 Creative Flow & Reading\n🌧️ Rainy Day Relaxation\n\n━━━━━━━━━━━━━━━━━━━━\n\n🔔 Subscribe to CelticDreamscape for weekly Celtic music:\nhttps://www.youtube.com/@CelticDreamscape-i2k?sub_confirmation=1\n\n🎵 More Celtic Music:\n▶️ All Videos: https://www.youtube.com/@CelticDreamscape-i2k/videos\n\n━━━━━━━━━━━━━━━━━━━━\n\n🎶 Music: Suno AI\n🎨 Visuals: Midjourney\n✍️ Direction & Production: CelticDreamscape\n\n━━━━━━━━━━━━━━━━━━━━\n\n💬 What moment brought you the most peace? Tell us below 🌿\n\n━━━━━━━━━━━━━━━━━━━━\n\nceltic music, celtic harp, relaxing music, study music, sleep music,\ndeep sleep music, meditation music, ambient music, focus music,\nceltic instrumental, forest ambience, nature sounds, peaceful music,\n1 hour music, healing music, stress relief music, insomnia relief,\nceltic flute, irish music, celtic dreamscape,\n\n#CelticMusic #StudyMusic #SleepMusic #RelaxingMusic #AmbientMusic\n#MeditationMusic #CelticHarp #FocusMusic #HealingMusic #DeepSleep\n#CelticDreamscape #NatureAmbient #ForestMusic #PeacefulMusic",
       "publishedAt": "2025-06-23T10:00:02Z",
       "thumbnails": {
         "default": {
@@ -920,7 +957,7 @@
     {
       "videoId": "0tMB-1QlZ0M",
       "title": "Celtic Music for Meditation & Sleep | 1 Hour Dew-Kissed Meadows 🌿",
-      "description": "Welcome to \"CelticDreamscape\" 🌿\n\nWander into the purple-heather moors at first light, where ancient stones whisper and a gentle Celtic flute greets the sunrise. Delicate harp arpeggios, soothing drones, and the hush of dawn breeze weave a tranquil soundscape—ideal for relaxation, study, meditation, or peaceful sleep. 🌅🎶💜\n\n✨ What you’ll experience\n• Slow 60–65 BPM rhythms that steady the heartbeat\n• Soft flute and harp melodies floating over misty moors\n• Natural dawn ambience for deep calm and focus\n\n🌱 Recommended ways to listen\n• As background music for work or study\n• For meditation or yoga before dawn\n• Relaxing before bed\n\nIf you enjoyed this video, you might also like this one! 🌟🎶\n▶️ Recommended video:\nGolden Light and Celtic Dreams[https://youtu.be/HlgwkIseCnE]\nSerenade by the Misty Lake[https://youtu.be/IfLEF2dq4j8]\n\nPlease subscribe to our channel and join us on a peaceful journey through natural beauty and timeless Celtic magic.\n\n🎵 Perfect for:\n📖 Study & Focus\n😴 Deep Sleep\n🧘 Meditation & Yoga\n💻 Work & Concentration\n🎨 Creative Flow\n━━━━━━━━━━━━━━━━━━━━\n🔔 Subscribe to CelticDreamscape for weekly Celtic music:\nhttps://www.youtube.com/@CelticDreamscape-i2k?sub_confirmation=1\n\n🎵 More Celtic Music:\n▶️ All Videos: https://www.youtube.com/@CelticDreamscape-i2k/videos\n━━━━━━━━━━━━━━━━━━━━\n\n#CelticMusic #AmbientMusic #StudyMusic #SleepMusic\n#RelaxingMusic #CelticHarp #MeditationMusic\n#CelticDreamscape #FocusMusic #NatureAmbient",
+      "description": "Welcome to \"CelticDreamscape\" 🌿\n\nWander into the purple-heather moors at first light, where ancient stones whisper and a gentle Celtic flute greets the sunrise. Delicate harp arpeggios, soothing drones, and the hush of dawn breeze weave a tranquil soundscape—ideal for relaxation, study, meditation, or peaceful sleep. 🌅🎶💜\n\n✨ What you’ll experience\n• Slow 60–65 BPM rhythms that steady the heartbeat\n• Soft flute and harp melodies floating over misty moors\n• Natural dawn ambience for deep calm and focus\n\n🌱 Recommended ways to listen\n• As background music for work or study\n• For meditation or yoga before dawn\n• Relaxing before bed\n\nIf you enjoyed this video, you might also like this one! 🌟🎶\n▶️ Recommended video:\nGolden Light and Celtic Dreams[https://youtu.be/HlgwkIseCnE]\nSerenade by the Misty Lake[https://youtu.be/IfLEF2dq4j8]\n\nPlease subscribe to our channel and join us on a peaceful journey through natural beauty and timeless Celtic magic.\n\n🎵 Perfect for:\n📖 Study & Focus\n😴 Deep Sleep\n🧘 Meditation & Yoga\n💻 Work & Concentration\n🎨 Creative Flow\n━��━━━━━━━━━━━━━━━━━━\n🔔 Subscribe to CelticDreamscape for weekly Celtic music:\nhttps://www.youtube.com/@CelticDreamscape-i2k?sub_confirmation=1\n\n🎵 More Celtic Music:\n▶️ All Videos: https://www.youtube.com/@CelticDreamscape-i2k/videos\n━━━━━━━━━━━━━━━━━━━━\n\n#CelticMusic #AmbientMusic #StudyMusic #SleepMusic\n#RelaxingMusic #CelticHarp #MeditationMusic\n#CelticDreamscape #FocusMusic #NatureAmbient",
       "publishedAt": "2025-06-15T10:00:06Z",
       "thumbnails": {
         "default": {
@@ -994,7 +1031,7 @@
     {
       "videoId": "Z8oczDA-GFM",
       "title": "Celtic Music for Sleep & Study | 1 Hour Emerald Lights & Snowy Dreams ❄️",
-      "description": "Welcome to \"CelticDreamscape\" 🌿\n❄️ Immerse yourself in the tranquil glow of Emerald Lights & Snowy Dreams. Under a sky painted with emerald auroras, delicate Celtic violin and soothing harp weave a gentle lullaby across frozen highlands. Let the shimmering lights and soft melodies guide you into peace—perfect for relaxation, study, meditation, or drifting into dreamland. 🌌🎻✨\n\nPlease subscribe to our channel and join us on a peaceful journey through natural beauty and timeless Celtic magic.\n\n🎵 Perfect for:\n📖 Study & Focus\n😴 Deep Sleep\n🧘 Meditation & Yoga\n💻 Work & Concentration\n🎨 Creative Flow\n━━━━━━━━━━━━━━━━━━━━\n🔔 Subscribe to CelticDreamscape for weekly Celtic music:\nhttps://www.youtube.com/@CelticDreamscape-i2k?sub_confirmation=1\n\n🎵 More Celtic Music:\n▶️ All Videos: https://www.youtube.com/@CelticDreamscape-i2k/videos\n━━━━━━━━━━━━━━━━━━━━\n\n#CelticMusic #AmbientMusic #StudyMusic #SleepMusic\n#RelaxingMusic #CelticHarp #MeditationMusic\n#CelticDreamscape #FocusMusic #NatureAmbient",
+      "description": "Welcome to \"CelticDreamscape\" 🌿\n❄️ Immerse yourself in the tranquil glow of Emerald Lights & Snowy Dreams. Under a sky painted with emerald auroras, delicate Celtic violin and soothing harp weave a gentle lullaby across frozen highlands. Let the shimmering lights and soft melodies guide you into peace—perfect for relaxation, study, meditation, or drifting into dreamland. 🌌🎻✨\n\nPlease subscribe to our channel and join us on a peaceful journey through natural beauty and timeless Celtic magic.\n\n🎵 Perfect for:\n📖 Study & Focus\n😴 Deep Sleep\n🧘 Meditation & Yoga\n💻 Work & Concentration\n🎨 Creative Flow\n━━━━━━━━��━━━━━━━━━━━\n🔔 Subscribe to CelticDreamscape for weekly Celtic music:\nhttps://www.youtube.com/@CelticDreamscape-i2k?sub_confirmation=1\n\n🎵 More Celtic Music:\n▶️ All Videos: https://www.youtube.com/@CelticDreamscape-i2k/videos\n━━━━━━━━━━━━━━━━━━━━\n\n#CelticMusic #AmbientMusic #StudyMusic #SleepMusic\n#RelaxingMusic #CelticHarp #MeditationMusic\n#CelticDreamscape #FocusMusic #NatureAmbient",
       "publishedAt": "2025-06-13T10:00:54Z",
       "thumbnails": {
         "default": {
@@ -1216,7 +1253,7 @@
     {
       "videoId": "djRRdBrSXmY",
       "title": "Celtic Music for Relaxation & Sleep | 1 Hour Starlit Valleys Ambience ✨",
-      "description": "Welcome to \"CelticDreamscape\" 🌿\n\nLet your heart wander into a world of starlit valleys and gentle Celtic magic. \"Whispers of Starlit Valleys\" is a soothing instrumental piece that invites you to relax beneath a sky filled with twinkling stars, where the gentle melodies of the flute and harp echo across moonlit meadows and peaceful lakeshores.\nLet the calming harmonies and dreamy atmosphere guide you to a place of healing, inspiration, and tranquility. Perfect for study, relaxation, meditation, or simply drifting away on a gentle Celtic breeze.\n\nIf you enjoyed this video, you might also like this one! 🌟🎶\n▶️ Recommended video:\nSounds of Dawn[https://youtu.be/u1-R74XzX8Y]\n\nPlease subscribe to our channel and join us on a peaceful journey through natural beauty and timeless Celtic magic. 🌙✨\n\n🎵 Perfect for:\n📖 Study & Focus\n😴 Deep Sleep\n🧘 Meditation & Yoga\n💻 Work & Concentration\n🎨 Creative Flow\n━━━━━━━━━━━━━━━━━━━━\n🔔 Subscribe to CelticDreamscape for weekly Celtic music:\nhttps://www.youtube.com/@CelticDreamscape-i2k?sub_confirmation=1\n\n🎵 More Celtic Music:\n▶️ All Videos: https://www.youtube.com/@CelticDreamscape-i2k/videos\n━━━━━━━━━━━━━━━━━━━━\n\n#CelticMusic #AmbientMusic #StudyMusic #SleepMusic\n#RelaxingMusic #CelticHarp #MeditationMusic\n#CelticDreamscape #FocusMusic #NatureAmbient",
+      "description": "Welcome to \"CelticDreamscape\" 🌿\n\nLet your heart wander into a world of starlit valleys and gentle Celtic magic. \"Whispers of Starlit Valleys\" is a soothing instrumental piece that invites you to relax beneath a sky filled with twinkling stars, where the gentle melodies of the flute and harp echo across moonlit meadows and peaceful lakeshores.\nLet the calming harmonies and dreamy atmosphere guide you to a place of healing, inspiration, and tranquility. Perfect for study, relaxation, meditation, or simply drifting away on a gentle Celtic breeze.\n\nIf you enjoyed this video, you might also like this one! 🌟🎶\n▶️ Recommended video:\nSounds of Dawn[https://youtu.be/u1-R74XzX8Y]\n\nPlease subscribe to our channel and join us on a peaceful journey through natural beauty and timeless Celtic magic. 🌙✨\n\n🎵 Perfect for:\n📖 Study & Focus\n😴 Deep Sleep\n🧘 Meditation & Yoga\n💻 Work & Concentration\n🎨 Creative Flow\n━━━━━━━━━━━━━━━━━━━━\n🔔 Subscribe to CelticDreamscape for weekly Celtic music:\nhttps://www.youtube.com/@CelticDreamscape-i2k?sub_confirmation=1\n\n🎵 More Celtic Music:\n▶️ All Videos: https://www.youtube.com/@CelticDreamscape-i2k/videos\n━━━━━━━���━━━━━━━━━━━━\n\n#CelticMusic #AmbientMusic #StudyMusic #SleepMusic\n#RelaxingMusic #CelticHarp #MeditationMusic\n#CelticDreamscape #FocusMusic #NatureAmbient",
       "publishedAt": "2025-06-05T04:33:59Z",
       "thumbnails": {
         "default": {
@@ -1327,7 +1364,7 @@
     {
       "videoId": "Sc1jgOpIoz0",
       "title": "Celtic Music for Meditation & Sleep | 1 Hour Celtic Legends Ambience 🌿",
-      "description": "🌿✨ Whispers of Celtic Legends Beneath the Ancient Tree ✨🌿\nStep into a magical world where ancient Celtic myths come alive under the majestic tree. Gather around the warm campfire as a wise grandmother shares timeless stories that inspire wonder and connection to nature’s beauty. Let the gentle melodies and soft firelight transport you to a realm of peace and enchantment.\n\nSubscribe and join us on this peaceful journey through nature’s beauty and timeless Celtic magic. 🔥🌳🍃\n\n🎵 Perfect for:\n📖 Study & Focus\n😴 Deep Sleep\n🧘 Meditation & Yoga\n💻 Work & Concentration\n🎨 Creative Flow\n━━━━━━━━━━━━━━━━━━━━\n🔔 Subscribe to CelticDreamscape for weekly Celtic music:\nhttps://www.youtube.com/@CelticDreamscape-i2k?sub_confirmation=1\n\n🎵 More Celtic Music:\n▶️ All Videos: https://www.youtube.com/@CelticDreamscape-i2k/videos\n━━━━━━━━━━━━━���━━━━━━\n\n#CelticMusic #AmbientMusic #StudyMusic #SleepMusic\n#RelaxingMusic #CelticHarp #MeditationMusic\n#CelticDreamscape #FocusMusic #NatureAmbient",
+      "description": "🌿✨ Whispers of Celtic Legends Beneath the Ancient Tree ✨🌿\nStep into a magical world where ancient Celtic myths come alive under the majestic tree. Gather around the warm campfire as a wise grandmother shares timeless stories that inspire wonder and connection to nature’s beauty. Let the gentle melodies and soft firelight transport you to a realm of peace and enchantment.\n\nSubscribe and join us on this peaceful journey through nature’s beauty and timeless Celtic magic. 🔥🌳🍃\n\n🎵 Perfect for:\n📖 Study & Focus\n😴 Deep Sleep\n🧘 Meditation & Yoga\n💻 Work & Concentration\n🎨 Creative Flow\n━━━━━━━━━━━━━━━━━━━━\n🔔 Subscribe to CelticDreamscape for weekly Celtic music:\nhttps://www.youtube.com/@CelticDreamscape-i2k?sub_confirmation=1\n\n🎵 More Celtic Music:\n▶️ All Videos: https://www.youtube.com/@CelticDreamscape-i2k/videos\n━━━━━━━━━━━━━━━━━━━━\n\n#CelticMusic #AmbientMusic #StudyMusic #SleepMusic\n#RelaxingMusic #CelticHarp #MeditationMusic\n#CelticDreamscape #FocusMusic #NatureAmbient",
       "publishedAt": "2025-05-27T03:23:55Z",
       "thumbnails": {
         "default": {
@@ -1364,7 +1401,7 @@
     {
       "videoId": "HlgwkIseCnE",
       "title": "Celtic Music for Relaxation & Study | 1 Hour Golden Light Celtic Dreams ✨",
-      "description": "🌅✨ Golden Light and Celtic Dreams ✨🌅\nStep into a magical world where the golden sunrise meets ancient Celtic melodies. Let the soothing harp and flute guide you through a peaceful journey of nature’s wonder and timeless enchantment. Perfect for relaxation, meditation, or simply escaping the daily hustle.\nSubscribe and join us on this peaceful journey through nature’s beauty and timeless Celtic magic. 🍀🎶\n\n🎵 Perfect for:\n📖 Study & Focus\n😴 Deep Sleep\n🧘 Meditation & Yoga\n💻 Work & Concentration\n🎨 Creative Flow\n━━━━━━━━━━━━━━━━━━━━\n🔔 Subscribe to CelticDreamscape for weekly Celtic music:\nhttps://www.youtube.com/@CelticDreamscape-i2k?sub_confirmation=1\n\n🎵 More Celtic Music:\n▶️ All Videos: https://www.youtube.com/@CelticDreamscape-i2k/videos\n━━━━━━━━━━━━━━━━━━���━\n\n#CelticMusic #AmbientMusic #StudyMusic #SleepMusic\n#RelaxingMusic #CelticHarp #MeditationMusic\n#CelticDreamscape #FocusMusic #NatureAmbient",
+      "description": "🌅✨ Golden Light and Celtic Dreams ✨🌅\nStep into a magical world where the golden sunrise meets ancient Celtic melodies. Let the soothing harp and flute guide you through a peaceful journey of nature’s wonder and timeless enchantment. Perfect for relaxation, meditation, or simply escaping the daily hustle.\nSubscribe and join us on this peaceful journey through nature’s beauty and timeless Celtic magic. 🍀🎶\n\n🎵 Perfect for:\n📖 Study & Focus\n😴 Deep Sleep\n🧘 Meditation & Yoga\n💻 Work & Concentration\n🎨 Creative Flow\n━━━━━━━━━━━━━━━━━━━━\n🔔 Subscribe to CelticDreamscape for weekly Celtic music:\nhttps://www.youtube.com/@CelticDreamscape-i2k?sub_confirmation=1\n\n🎵 More Celtic Music:\n▶️ All Videos: https://www.youtube.com/@CelticDreamscape-i2k/videos\n━━━━━━━━━━━━━━━━━━━━\n\n#CelticMusic #AmbientMusic #StudyMusic #SleepMusic\n#RelaxingMusic #CelticHarp #MeditationMusic\n#CelticDreamscape #FocusMusic #NatureAmbient",
       "publishedAt": "2025-05-26T02:06:37Z",
       "thumbnails": {
         "default": {
@@ -1401,7 +1438,7 @@
     {
       "videoId": "y0t-D_87sRU",
       "title": "Celtic Music for Relaxation & Work | 1 Hour Sunlit Celtic Gathering 🌅",
-      "description": "🌞✨ Step into the sunlit world of Celtic traditions! Join us in this joyful gathering where ancient music, dance, and timeless rituals come alive. Feel the vibrant energy of lively villagers celebrating in lush green meadows, surrounded by the magic of nature and history. Perfect for relaxing, studying, or dreaming away. Let the enchanting harp and flute melodies carry you to a magical Celtic festival experience. 🍃🎶\n\nSubscribe and join us on this peaceful journey through nature’s beauty and timeless Celtic magic.\n\n🎵 Perfect for:\n📖 Study & Focus\n😴 Deep Sleep\n🧘 Meditation & Yoga\n💻 Work & Concentration\n🎨 Creative Flow\n━━━━━━━━━━━━━━━━━━━━\n🔔 Subscribe to CelticDreamscape for weekly Celtic music:\nhttps://www.youtube.com/@CelticDreamscape-i2k?sub_confirmation=1\n\n🎵 More Celtic Music:\n▶️ All Videos: https://www.youtube.com/@CelticDreamscape-i2k/videos\n━━━━━━━━━━━━━━━━━━━━\n\n#CelticMusic #AmbientMusic #StudyMusic #SleepMusic\n#RelaxingMusic #CelticHarp #MeditationMusic\n#CelticDreamscape #FocusMusic #NatureAmbient",
+      "description": "🌞✨ Step into the sunlit world of Celtic traditions! Join us in this joyful gathering where ancient music, dance, and timeless rituals come alive. Feel the vibrant energy of lively villagers celebrating in lush green meadows, surrounded by the magic of nature and history. Perfect for relaxing, studying, or dreaming away. Let the enchanting harp and flute melodies carry you to a magical Celtic festival experience. 🍃🎶\n\nSubscribe and join us on this peaceful journey through nature’s beauty and timeless Celtic magic.\n\n🎵 Perfect for:\n📖 Study & Focus\n😴 Deep Sleep\n🧘 Meditation & Yoga\n💻 Work & Concentration\n�� Creative Flow\n━━━━━━━━━━━━━━━━━━━━\n🔔 Subscribe to CelticDreamscape for weekly Celtic music:\nhttps://www.youtube.com/@CelticDreamscape-i2k?sub_confirmation=1\n\n🎵 More Celtic Music:\n▶️ All Videos: https://www.youtube.com/@CelticDreamscape-i2k/videos\n━━━━━━━━━━━━━━━━━━━━\n\n#CelticMusic #AmbientMusic #StudyMusic #SleepMusic\n#RelaxingMusic #CelticHarp #MeditationMusic\n#CelticDreamscape #FocusMusic #NatureAmbient",
       "publishedAt": "2025-05-25T01:47:10Z",
       "thumbnails": {
         "default": {
@@ -1586,7 +1623,7 @@
     {
       "videoId": "Oia_CjDQ8OQ",
       "title": "Celtic Harp Music for Sleep & Meditation | 1 Hour Enchanted Forest 🌿",
-      "description": "Step into a world of magic and tranquility with Mystical Celtic Harp:\n Enchanted Forest Melodies 🌿🎶. This instrumental track features soothing\n harp melodies intertwined with the gentle sounds of nature 🌸🌞. Perfect\n for relaxation, meditation, study, or simply escaping into a serene forest\n dreamscape 🌲✨.\n\nLet the mystical harp transport you to an enchanted woodland, where every\n note carries the whispers of ancient Celtic legends and the beauty of\n untouched nature 🌺🍃. Immerse yourself in this peaceful journey and feel\n your mind and spirit rejuvenate 💖🧘‍♀️.\n\nSubscribe for more calming Celtic music and magical soundscapes 🔔🌟.\n\n🎵 Perfect for:\n📖 Study & Focus\n���� Deep Sleep\n🧘 Meditation & Yoga\n💻 Work & Concentration\n🎨 Creative Flow\n━━━━━━━━━━━━━━━━━━━━\n🔔 Subscribe to CelticDreamscape for weekly Celtic music:\nhttps://www.youtube.com/@CelticDreamscape-i2k?sub_confirmation=1\n\n🎵 More Celtic Music:\n▶️ All Videos: https://www.youtube.com/@CelticDreamscape-i2k/videos\n━━━━━━━━━━━━━━━━━━━━\n\n#CelticMusic #AmbientMusic #StudyMusic #SleepMusic\n#RelaxingMusic #CelticHarp #MeditationMusic\n#CelticDreamscape #FocusMusic #NatureAmbient",
+      "description": "Step into a world of magic and tranquility with Mystical Celtic Harp:\n Enchanted Forest Melodies 🌿🎶. This instrumental track features soothing\n harp melodies intertwined with the gentle sounds of nature 🌸🌞. Perfect\n for relaxation, meditation, study, or simply escaping into a serene forest\n dreamscape 🌲✨.\n\nLet the mystical harp transport you to an enchanted woodland, where every\n note carries the whispers of ancient Celtic legends and the beauty of\n untouched nature 🌺🍃. Immerse yourself in this peaceful journey and feel\n your mind and spirit rejuvenate 💖🧘‍♀️.\n\nSubscribe for more calming Celtic music and magical soundscapes 🔔🌟.\n\n🎵 Perfect for:\n📖 Study & Focus\n😴 Deep Sleep\n🧘 Meditation & Yoga\n💻 Work & Concentration\n🎨 Creative Flow\n━━━━━━━━━━━━━━━━━━━━\n🔔 Subscribe to CelticDreamscape for weekly Celtic music:\nhttps://www.youtube.com/@CelticDreamscape-i2k?sub_confirmation=1\n\n🎵 More Celtic Music:\n▶️ All Videos: https://www.youtube.com/@CelticDreamscape-i2k/videos\n━━━━━━━━━━━━━━━━━━━━\n\n#CelticMusic #AmbientMusic #StudyMusic #SleepMusic\n#RelaxingMusic #CelticHarp #MeditationMusic\n#CelticDreamscape #FocusMusic #NatureAmbient",
       "publishedAt": "2025-05-20T06:39:13Z",
       "thumbnails": {
         "default": {
